@@ -1,0 +1,33 @@
+[
+  {
+    "title": "HackRU Spring 2026",
+    "description": "24-hour marathon of coding, caffeine, and creativity. Build a project from scratch and win prizes.",
+    "tags": [
+      "computer science",
+      "technology",
+      "engineering",
+      "workshop",
+      "competition"
+    ]
+  },
+  {
+    "title": "Pre-Med Genetics Seminar",
+    "description": "A deep dive into CRISPR and gene editing for students interested in medical school.",
+    "tags": [
+      "pre-med",
+      "biology",
+      "seminar"
+    ]
+  },
+  {
+    "title": "Business & Tech Mixer",
+    "description": "Networking event for engineering and data science students to meet industry professionals.",
+    "tags": [
+      "networking",
+      "engineering",
+      "data science",
+      "business",
+      "technology"
+    ]
+  }
+]
