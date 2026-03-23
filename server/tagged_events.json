@@ -1,33 +1,54 @@
 [
   {
-    "title": "HackRU Spring 2026",
-    "description": "24-hour marathon of coding, caffeine, and creativity. Build a project from scratch and win prizes.",
+    "club_name": "USACS",
+    "title": "UHACCS Spring 2026",
+    "description": "8-hour marathon of coding, caffeine, and creativity. Build a project from scratch and win prizes.",
+    "location": "Livingston Student Center",
+    "date": "2026-04-12",
+    "start_time": "10:00 AM",
+    "end_time": "10:00 AM",
     "tags": [
       "computer science",
+      "programming",
+      "hackathon",
+      "software development",
       "technology",
-      "engineering",
-      "workshop",
-      "competition"
+      "competition",
+      "innovation",
+      "engineering"
     ]
   },
   {
+    "club_name": "Designer Genes Club",
     "title": "Pre-Med Genetics Seminar",
     "description": "A deep dive into CRISPR and gene editing for students interested in medical school.",
+    "location": "Busch Student Center, Room 120",
+    "date": "2026-03-28",
+    "start_time": "6:30 PM",
+    "end_time": "8:00 PM",
     "tags": [
       "pre-med",
+      "genetics",
+      "biotechnology",
       "biology",
-      "seminar"
+      "medicine"
     ]
   },
   {
+    "club_name": "Women In Business",
     "title": "Business & Tech Mixer",
     "description": "Networking event for engineering and data science students to meet industry professionals.",
+    "location": "Livingston Professional Building",
+    "date": "2026-04-05",
+    "start_time": "5:00 PM",
+    "end_time": "7:00 PM",
     "tags": [
+      "business",
+      "technology",
       "networking",
       "engineering",
       "data science",
-      "business",
-      "technology"
+      "career"
     ]
   }
 ]

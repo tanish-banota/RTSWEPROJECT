@@ -10,26 +10,23 @@ load_dotenv()
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 CURRENT_MODEL = "gemini-2.5-flash"
 
-def generate_tags(title, description, use_ai=True):
-    """
-    Takes an event title and description, and returns a list of tags.
-    Uses AI by default, but has a local fallback.
-    """
+def generate_tags(event, use_ai=True):
+    title = event.get('title', 'No Title')
+    description = event.get('description', '')
+    club = event.get('club_name', 'Unknown Club')
+        
     if not use_ai:
-        # Local fallback logic in case of API issues
-        text = (title + " " + description).lower()
-        possible_tags = ['computer science', 'biology', 'social', 'hackathon', 'academic']
-        return [tag for tag in possible_tags if tag in text] or ["general"]
+        return ["academic"]
 
     prompt = f"""
-    Categorize this Rutgers University event into a comma-separated list of tags.
+    Categorize this Rutgers event for students:
+    Club: {club}
     Title: {title}
     Description: {description}
     
-    ONLY return the tags, separated by commas. Do not include extra text.
-    Use tags like: computer science, biology, pre-med, engineering, social, workshop, etc.
+    Return only a comma-separated list of tags (e.g., computer science, networking, pre-med).
     """
-
+    
     try:
         # Call the Gemini 2.5 model
         response = client.models.generate_content(
@@ -40,7 +37,7 @@ def generate_tags(title, description, use_ai=True):
         tag_list = [t.strip().lower() for t in response.text.split(",")]
         return tag_list
     except Exception as e:
-        print(f"⚠️ AI Error for '{title}': {e}")
+        print(f"AI Error for '{title}': {e}")
         # Fallback to local if AI fails
         return generate_tags(title, description, use_ai=False)
 
@@ -53,18 +50,18 @@ def process_events_pipeline(input_filename, output_filename):
         with open(input_filename, 'r') as f:
             events = json.load(f)
     except FileNotFoundError:
-        print(f"❌ Error: {input_filename} not found. Create it first!")
+        print(f"Error: {input_filename} not found. Create it first!")
         return
 
-    print(f"🚀 Starting pipeline: Processing {len(events)} events...")
-    
+    print(f"Starting pipeline: Processing {len(events)} events...")
+
     tagged_results = []
 
     for event in events:
         print(f"Stitching tags for: {event['title']}...")
         
         # Get the tags (using AI)
-        tags = generate_tags(event['title'], event['description'], use_ai=True)
+        tags = generate_tags(event, use_ai=True)
         
         # Add the tags to the event dictionary
         event['tags'] = tags
@@ -74,7 +71,7 @@ def process_events_pipeline(input_filename, output_filename):
     with open(output_filename, 'w') as f:
         json.dump(tagged_results, f, indent=2)
 
-    print(f"✅ Success! Enriched data saved to {output_filename}")
+    print(f"Success! Enriched data saved to {output_filename}")
 
 # --- EXECUTION ---
 if __name__ == "__main__":
