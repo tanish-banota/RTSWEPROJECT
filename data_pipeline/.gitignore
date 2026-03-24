@@ -1,0 +1,16 @@
+# Mac system files
+.DS_Store
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+
+# Data (Ignore the actual scraped files, but keep the folders via .gitkeep)
+data/raw/*
+data/clean/*
+!data/raw/.gitkeep
+!data/clean/.gitkeep
