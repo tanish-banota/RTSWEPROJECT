@@ -2,24 +2,39 @@
 
 import { useState, useEffect } from "react";
 import EventCard from "@/components/EventCard";
-import { mockEvents, Event } from "@/lib/mockData";
+import { getEvents, Event } from "@/lib/api";
 
 export default function FeedPage() {
   const [events, setEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setEvents(mockEvents);
-      setLoading(false);
-    }, 500);
+    const fetchEvents = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        const data = await getEvents();
+        setEvents(data);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Failed to fetch events");
+        console.error("Error fetching events:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-    return () => clearTimeout(timer);
+    fetchEvents();
   }, []);
 
   // LOADING STATE
   if (loading) {
     return <p className="p-6">Loading events...</p>;
+  }
+
+  // ERROR STATE
+  if (error) {
+    return <p className="p-6 text-red-500">Error: {error}</p>;
   }
 
   // EMPTY STATE
@@ -38,4 +53,3 @@ export default function FeedPage() {
     </div>
   );
 }
-// working with mockdata for now, will replace with backend data fetching in the future
