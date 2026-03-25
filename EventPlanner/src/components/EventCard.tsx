@@ -9,6 +9,7 @@ type Event = {
   club: string;
   date: string;
   location: string;
+  description: string;
 };
 
 type EventCardProps = {
@@ -40,9 +41,9 @@ export default function EventCard({ event }: EventCardProps) {
       <Link href={`/event/${event.id}`}>
         <div className="cursor-pointer hover:bg-gray-50 p-2 rounded">
           <h2 className="text-xl font-bold">{event.title}</h2>
-          <p>{event.club}</p>
-          <p>{new Date(event.date).toLocaleString()}</p>
-          <p>{event.location}</p>
+          <p className="text-sm text-gray-600">{event.club}</p>
+          <p className="text-sm text-gray-600">{new Date(event.date).toLocaleString()}</p>
+          <p className="text-sm text-gray-600">{event.location}</p>
         </div>
       </Link>
 
