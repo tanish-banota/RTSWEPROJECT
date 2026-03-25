@@ -1,5 +1,5 @@
 import json
-import os
+from pathlib import Path
 from bs4 import BeautifulSoup
 from datetime import datetime, timezone
 
@@ -15,17 +15,28 @@ def clean_html(raw_html):
 
 
 def parse_events():
-    # 1. Load Raw Data
-    with open("data/raw/raw.json", "r", encoding="utf-8") as file:
+
+    # --- UPDATED PATHING SECTION START ---
+    # Anchor to the data_pipeline directory
+    SCRIPT_DIR = Path(__file__).resolve().parent
+    PIPELINE_DIR = SCRIPT_DIR.parent
+
+    # Build dynamic paths for both reading and writing
+    raw_file_path = PIPELINE_DIR / "data" / "raw" / "raw.json"
+    clean_file_path = PIPELINE_DIR / "data" / "clean" / "clean.json"
+    # --- UPDATED PATHING SECTION END ---
+
+    # Load Raw Data
+    with open(raw_file_path, "r", encoding="utf-8") as file:
         raw_data = json.load(file)
 
-    # 2. Isolate all other data except the values we need.
+    # Isolate all other data except the values we need.
     # If cannot find value, don't return error, rather a []
     events_list = raw_data.get("value", [])
 
     clean_events = []
 
-    # 4. Iterate and Clean
+    # Iterate and Clean
     for event in events_list:
         try:
             # Extract basic text, same logic as earlier, return "" if no value found
@@ -70,9 +81,10 @@ def parse_events():
             print(f"Skipping an event due to parsing error: {e}")
             continue
 
-    # 5. Export Clean Data
-    os.makedirs("data/clean", exist_ok=True)  # Making sure folder exists
-    with open("data/clean/clean.json", "w", encoding="utf-8") as outfile:
+    # Export Clean Data
+    # Making sure folder exists
+    clean_file_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(clean_file_path, "w", encoding="utf-8") as outfile:
         json.dump(clean_events, outfile, indent=4)
 
     print(f"Successfully cleaned {len(clean_events)} events!")

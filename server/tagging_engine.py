@@ -44,6 +44,7 @@ def generate_tags(event, use_ai=True, attempt=1):
         tqdm.write(f"❌ AI ERROR for '{title}': {e}")
         return generate_tags(event, use_ai=False)
 
+
 def process_events_pipeline(input_file, output_file):
     if not os.path.exists(input_file):
         print(f"Error: {input_file} not found.")
