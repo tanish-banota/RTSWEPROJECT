@@ -39,41 +39,50 @@ def generate_tags(event, use_ai=True):
     except Exception as e:
         print(f"AI Error for '{title}': {e}")
         # Fallback to local if AI fails
-        return generate_tags(title, description, use_ai=False)
+        return generate_tags(event, use_ai=False)
 
-def process_events_pipeline(input_filename, output_filename):
-    """
-    The main 'Backend Lead' logic: Reads raw JSON, tags everything, saves new JSON.
-    """
-    # Load your sample data
-    try:
-        with open(input_filename, 'r') as f:
-            events = json.load(f)
-    except FileNotFoundError:
-        print(f"Error: {input_filename} not found. Create it first!")
-        return
+def process_events_pipeline(input_file, output_file):
+    # 1. Load the new raw events
+    with open(input_file, 'r') as f:
+        new_events = json.load(f)
 
-    print(f"Starting pipeline: Processing {len(events)} events...")
+    # 2. Load existing tagged events so we don't repeat work
+    existing_tags = []
+    if os.path.exists(output_file):
+        with open(output_file, 'r') as f:
+            existing_tags = json.load(f)
 
-    tagged_results = []
+    # Create a "lookup set" of titles we've already tagged
+    already_processed = {f"{e['title']}-{e['date']}" for e in existing_tags}
 
-    for event in events:
-        print(f"Stitching tags for: {event['title']}...")
+    final_output = existing_tags # Start with what we already have
+    newly_tagged_count = 0
+
+    print(f"Checking {len(new_events)} events...")
+
+    for event in new_events:
+        event_key = f"{event['title']}-{event['date']}"
         
-        # Get the tags (using AI)
+        if event_key in already_processed:
+            print(f"⏭️  Already tagged: {event['title']}")
+            continue
+
+        # 3. Only run the AI for truly NEW events
+        print(f"✨ Tagging NEW event: {event['title']}...")
         tags = generate_tags(event, use_ai=True)
-        
-        # Add the tags to the event dictionary
         event['tags'] = tags
-        tagged_results.append(event)
+        
+        final_output.append(event)
+        newly_tagged_count += 1
 
-    # Save the newly enriched data to a new file
-    with open(output_filename, 'w') as f:
-        json.dump(tagged_results, f, indent=2)
+    # 4. Save the combined list back to the file
+    with open(output_file, 'w') as f:
+        json.dump(final_output, f, indent=4)
 
-    print(f"Success! Enriched data saved to {output_filename}")
+    print(f"\nPipeline complete! Added {newly_tagged_count} new tagged events.")
 
 # --- EXECUTION ---
 if __name__ == "__main__":
     # This runs the whole process
-    process_events_pipeline('server/sample_events.json', 'server/tagged_events.json')
+    #process_events_pipeline('server/sample_events.json', 'server/tagged_events.json')
+    process_events_pipeline('data/clean/clean.json', 'server/tagged_events.json')
