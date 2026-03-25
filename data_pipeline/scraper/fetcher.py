@@ -1,6 +1,6 @@
 import requests
 import json
-import os
+from pathlib import Path
 
 
 def fetch_events():
@@ -23,10 +23,16 @@ def fetch_events():
         # Parse the response into a Python dictionary(JSON format)
         raw_data = response.json()
 
-        # Ensure your raw data directory exists before saving
-        os.makedirs("data/raw", exist_ok=True)
-        # A file path for where we want to save file
-        file_path = "data/raw/raw.json"
+        # --- UPDATED SECTION START ---
+        # 1. Anchor to the data_pipeline directory
+        SCRIPT_DIR = Path(__file__).resolve().parent
+        PIPELINE_DIR = SCRIPT_DIR.parent
+        # 2. Build the absolute path to your raw.json file
+        file_path = PIPELINE_DIR / "data" / "raw" / "raw.json"
+
+        # 3. Ensure the nested directories exist before saving
+        file_path.parent.mkdir(parents=True, exist_ok=True)
+        # --- UPDATED SECTION END ---
 
         # Export the raw JSON onto the file
         with open(file_path, "w", encoding="utf-8") as file:
