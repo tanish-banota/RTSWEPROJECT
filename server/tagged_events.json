@@ -207,5 +207,38 @@
         "tags": [
             "academic"
         ]
+    },
+    {
+        "title": "Torah Talk - Pesach in Jewish Thought",
+        "club_name": "Hillel (Rutgers)",
+        "description": "We will be exploring a fascinating Hasidic perspective on what it means to recount the story of Exodus. Shiur with Noam Blauer, Hadar Student Rabbi.",
+        "location": "Rutgers Hillel",
+        "date": "2026-03-24",
+        "start_time": "2026-03-24T22:00:00Z",
+        "end_time": "2026-03-24T23:00:00Z",
+        "source": "getinvolved",
+        "tags": [
+            "jewish life",
+            "religious studies",
+            "jewish learning",
+            "torah study",
+            "jewish thought",
+            "culture",
+            "lecture",
+            "spirituality"
+        ]
+    },
+    {
+        "title": "2016 Themed Karaoke",
+        "club_name": "Fusion: The Rutgers Union of Mixed People",
+        "description": "Join us March 24th at 7:30pm for some 2016 karaoke. Lets bring back 2016 vibes a decade later! This meeting will take place at the Rutgers Room @ Douglass Student Center.",
+        "location": "Rutgers Room @ Douglass Student Center",
+        "date": "2026-03-24",
+        "start_time": "2026-03-24T23:30:00Z",
+        "end_time": "2026-03-25T01:00:00Z",
+        "source": "getinvolved",
+        "tags": [
+            "academic"
+        ]
     }
 ]

@@ -10,11 +10,12 @@ load_dotenv()
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 CURRENT_MODEL = "gemini-2.5-flash"
 
+
 def generate_tags(event, use_ai=True):
     title = event.get('title', 'No Title')
     description = event.get('description', '')
     club = event.get('club_name', 'Unknown Club')
-        
+
     if not use_ai:
         return ["academic"]
 
@@ -26,7 +27,7 @@ def generate_tags(event, use_ai=True):
     
     Return only a comma-separated list of tags (e.g., computer science, networking, pre-med).
     """
-    
+
     try:
         # Call the Gemini 2.5 model
         response = client.models.generate_content(
@@ -40,6 +41,7 @@ def generate_tags(event, use_ai=True):
         print(f"AI Error for '{title}': {e}")
         # Fallback to local if AI fails
         return generate_tags(event, use_ai=False)
+
 
 def process_events_pipeline(input_file, output_file):
     # 1. Load the new raw events
@@ -55,14 +57,14 @@ def process_events_pipeline(input_file, output_file):
     # Create a "lookup set" of titles we've already tagged
     already_processed = {f"{e['title']}-{e['date']}" for e in existing_tags}
 
-    final_output = existing_tags # Start with what we already have
+    final_output = existing_tags  # Start with what we already have
     newly_tagged_count = 0
 
     print(f"Checking {len(new_events)} events...")
 
     for event in new_events:
         event_key = f"{event['title']}-{event['date']}"
-        
+
         if event_key in already_processed:
             print(f"⏭️  Already tagged: {event['title']}")
             continue
@@ -71,7 +73,7 @@ def process_events_pipeline(input_file, output_file):
         print(f"✨ Tagging NEW event: {event['title']}...")
         tags = generate_tags(event, use_ai=True)
         event['tags'] = tags
-        
+
         final_output.append(event)
         newly_tagged_count += 1
 
@@ -79,10 +81,13 @@ def process_events_pipeline(input_file, output_file):
     with open(output_file, 'w') as f:
         json.dump(final_output, f, indent=4)
 
-    print(f"\nPipeline complete! Added {newly_tagged_count} new tagged events.")
+    print(
+        f"\nPipeline complete! Added {newly_tagged_count} new tagged events.")
+
 
 # --- EXECUTION ---
 if __name__ == "__main__":
     # This runs the whole process
-    #process_events_pipeline('server/sample_events.json', 'server/tagged_events.json')
-    process_events_pipeline('data/clean/clean.json', 'server/tagged_events.json')
+    # process_events_pipeline('server/sample_events.json', 'server/tagged_events.json')
+    process_events_pipeline(
+        'data_pipeline/data/clean/clean.json', 'server/tagged_events.json')
