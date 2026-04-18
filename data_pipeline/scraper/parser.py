@@ -1,11 +1,9 @@
-from config import RAW_PATH, CLEAN_PATH
-from datetime import datetime, timezone
-from bs4 import BeautifulSoup
 import json
+from bs4 import BeautifulSoup
+from datetime import datetime, timezone
 import sys
 from pathlib import Path
 
-# Connecting config.py to parser.py since the two files live in different folders
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 
@@ -17,6 +15,8 @@ def clean_html(raw_html):
 
 
 def parse_events(raw_data=None):
+    from config import RAW_PATH, CLEAN_PATH
+
     # Accept raw_data directly (pipeline chaining) or fall back to reading from disk
     if raw_data is None:
         try:

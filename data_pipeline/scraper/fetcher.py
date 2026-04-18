@@ -1,28 +1,24 @@
-from config import RAW_PATH
 from datetime import datetime, timezone
-import json
+from urllib.parse import quote
 import requests
+import json
 import sys
 from pathlib import Path
 
-# Connecting config.py to fetcher.py since the two files live in different folders
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 
-def build_url(take=50):
+def fetch_events():
+    from config import RAW_PATH
+
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S+00:00")
-    return (
+    url = (
         f"https://rutgers.campuslabs.com/engage/api/discovery/event/search"
-        f"?endsAfter={requests.utils.quote(now)}"
+        f"?endsAfter={quote(now)}"
         f"&orderByField=endsOn&orderByDirection=ascending"
-        f"&status=Approved&take={take}&query="
+        f"&status=Approved&take=15&query="
     )
 
-
-def fetch_events():
-    url = build_url()
-
-    # Mimic a browser to avoid automated request blocking.
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "Accept": "application/json"
@@ -31,13 +27,11 @@ def fetch_events():
     print("Fetching event data from Anthology Engage API...")
 
     try:
-        # Data scrapping
         response = requests.get(url, headers=headers)
         response.raise_for_status()
 
         raw_data = response.json()
 
-        # Checking output file exists, if not then create one
         RAW_PATH.parent.mkdir(parents=True, exist_ok=True)
         with open(RAW_PATH, "w", encoding="utf-8") as file:
             json.dump(raw_data, file, indent=4)
