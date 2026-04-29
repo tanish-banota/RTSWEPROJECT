@@ -7,8 +7,6 @@ from pathlib import Path
 import pytz
 from dateutil import parser as dateutil_parser
 
-# Adding data_pipeline folder to search path
-
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 EASTERN = pytz.timezone("America/New_York")
@@ -29,20 +27,17 @@ _WEEKDAY_RE = re.compile(
     r"\b((?:this|next)\s+)?(" + "|".join(WEEKDAYS) + r")\b",
     re.IGNORECASE,
 )
-
-# Matches ranges like "7pm - 9pm", "7:00pm to 9:00pm", "7–9pm"
 _TIME_RANGE_RE = re.compile(
     r"\b(\d{1,2}(?::\d{2})?\s*(?:am|pm))\s*(?:[-–]|to)\s*(\d{1,2}(?::\d{2})?\s*(?:am|pm))\b",
     re.IGNORECASE,
 )
 _TIME_RE = re.compile(r"\b(\d{1,2}(?::\d{2})?\s*(?:am|pm))\b", re.IGNORECASE)
-
 _LOCATION_RE = re.compile(
     r"(?:location|venue|room|where|held at|held in|place)[:\s]+([^\n,\.]{3,60})",
     re.IGNORECASE,
 )
 
-# Matches edit-log bot messages like "Username edited to: ..."
+# Matches edit-log messages like "Username edited to: ..."
 _EDIT_LOG_RE = re.compile(r"^.+\s+edited\s+to:\s*", re.IGNORECASE)
 
 
@@ -115,16 +110,16 @@ def extract_location(text: str) -> str:
     return m.group(1).strip() if m else ""
 
 
-def parse_discord_messages(raw_data=None):
-    from config import DISCORD_RAW_PATH, DISCORD_CLEAN_PATH
+def parse_groupme_messages(raw_data=None):
+    from config import GROUPME_RAW_PATH, GROUPME_CLEAN_PATH
 
     if raw_data is None:
         try:
-            with open(DISCORD_RAW_PATH, "r", encoding="utf-8") as f:
+            with open(GROUPME_RAW_PATH, "r", encoding="utf-8") as f:
                 raw_data = json.load(f)
         except FileNotFoundError:
             print(
-                f"Error: discord raw data not found at {DISCORD_RAW_PATH}. Run discord_fetcher first.")
+                f"Error: GroupMe raw data not found at {GROUPME_RAW_PATH}. Run groupme_fetcher first.")
             return None
 
     clean_events = []
@@ -132,14 +127,14 @@ def parse_discord_messages(raw_data=None):
 
     for msg in raw_data:
         try:
-            content = msg.get("content", "")
-            if not content.strip() or _EDIT_LOG_RE.match(content):
+            text = msg.get("text") or ""
+            if not text.strip() or _EDIT_LOG_RE.match(text):
                 skipped += 1
                 continue
 
-            # Convert message timestamp to Eastern so relative day resolution (e.g. "this Thursday") uses the correct local date
-            reference = dateutil_parser.parse(msg["timestamp"]).astimezone(EASTERN).replace(tzinfo=None)
-            clean_text = strip_markdown(content)
+            # Convert Unix timestamp to Eastern so relative day resolution (e.g. "this Thursday") uses the correct local date
+            reference = datetime.fromtimestamp(msg["created_at"], tz=EASTERN).replace(tzinfo=None)
+            clean_text = strip_markdown(text)
 
             date_dt = extract_date(clean_text, reference)
             if date_dt is None:
@@ -155,27 +150,26 @@ def parse_discord_messages(raw_data=None):
 
             clean_events.append({
                 "title": extract_title(clean_text),
-                "club_name": msg.get("author", {}).get("username", ""),
+                "club_name": msg.get("name", ""),
                 "description": clean_text,
                 "location": extract_location(clean_text),
                 "date": date_dt.strftime("%Y-%m-%d"),
                 "start_time": start_et.strftime("%Y-%m-%dT%H:%M:%S"),
                 "end_time": end_et.strftime("%Y-%m-%dT%H:%M:%S") if end_et else "",
-                "source": "discord",
+                "source": "groupme",
             })
         except Exception as e:
             print(f"Skipping a message due to parsing error: {e}")
             skipped += 1
             continue
 
-    DISCORD_CLEAN_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with open(DISCORD_CLEAN_PATH, "w", encoding="utf-8") as f:
+    GROUPME_CLEAN_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with open(GROUPME_CLEAN_PATH, "w", encoding="utf-8") as f:
         json.dump(clean_events, f, indent=4)
 
-    print(
-        f"Successfully parsed {len(clean_events)} Discord events! ({skipped} messages skipped)")
+    print(f"Successfully parsed {len(clean_events)} GroupMe events! ({skipped} messages skipped)")
     return clean_events
 
 
 if __name__ == "__main__":
-    parse_discord_messages()
+    parse_groupme_messages()

@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 DISCORD_API_BASE = "https://discord.com/api/v10"
 
 # Limit for Scrapping per request
-MESSAGES_PER_REQUEST = 100
+MESSAGES_PER_REQUEST = 25
 
 
 def _get_token():

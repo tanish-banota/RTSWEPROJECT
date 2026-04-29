@@ -1038,5 +1038,868 @@
             "general",
             "campus life"
         ]
+    },
+    {
+        "title": "End of Year Social ",
+        "club_name": "Economics Society (Rutgers)",
+        "description": "End of Year Social",
+        "location": "College Avenue Student Center room 411AB",
+        "date": "2026-04-29",
+        "start_time": "2026-04-29T22:30:00",
+        "end_time": "2026-04-29T23:30:00",
+        "source": "getinvolved",
+        "tags": [
+            "economics",
+            "rutgers",
+            "student social",
+            "club event",
+            "end-of-year"
+        ]
+    },
+    {
+        "title": "End of Semester Game Day ",
+        "club_name": "Diabetes Link (Rutgers)",
+        "description": "Come by Werblin Volleyball Court to join us for some outdoor games! Take a break from finals prep to unwind with some games, food, and socializing!",
+        "location": "Werblin Gym Volleyball Court",
+        "date": "2026-04-29",
+        "start_time": "2026-04-29T19:00:00",
+        "end_time": "2026-04-29T23:30:00",
+        "source": "getinvolved",
+        "tags": [
+            "game day",
+            "study break",
+            "student social",
+            "end of semester",
+            "outdoor"
+        ]
+    },
+    {
+        "title": "AI Club FINAL Meeting",
+        "club_name": "Artificial Intelligence Club ",
+        "description": "BSC 120C",
+        "location": "Busch Student Center",
+        "date": "2026-04-29",
+        "start_time": "2026-04-29T23:00:00",
+        "end_time": "2026-04-30T00:00:00",
+        "source": "getinvolved",
+        "tags": [
+            "ai",
+            "club meeting",
+            "end of year meeting",
+            "rutgers"
+        ]
+    },
+    {
+        "title": "Educational Guest Speakers",
+        "club_name": "Hillel (Rutgers)",
+        "description": "Speakers with specific knowledge of educational Jewish topics talk about fascinating subjects relating to Jewish culture/history.",
+        "location": "Rutgers Hillel",
+        "date": "2026-04-29",
+        "start_time": "2026-04-29T23:00:00",
+        "end_time": "2026-04-30T00:00:00",
+        "source": "getinvolved",
+        "tags": [
+            "jewish education",
+            "guest speaker",
+            "jewish culture",
+            "jewish history"
+        ]
+    },
+    {
+        "title": "RUVSC - Spring Destressor",
+        "club_name": "Veterinary Science Club (Rutgers University)",
+        "description": "Our last meeting of the year will be our spring destressor! We will be in Bartlett 123 at 7 pm on 4/29.",
+        "location": "Bartlett 123",
+        "date": "2026-04-29",
+        "start_time": "2026-04-29T23:00:00",
+        "end_time": "2026-04-30T00:00:00",
+        "source": "getinvolved",
+        "tags": [
+            "student organization event",
+            "veterinary science",
+            "destressor",
+            "end of year"
+        ]
+    },
+    {
+        "title": "Summer Bucket List Making",
+        "club_name": "Women in Computer Science",
+        "description": "\u2600\ufe0f Come out to our last event of the year where we\u2019ll be making summer bucket lists, preparing for the next recruitment cycle, and saying goodbye to our seniors! \u26f1\ufe0f P.S. Sweet treats provided! \ud83c\udf6a \ud83d\udccd CSL \u23f0 7\u20138 pm \ud83d\uddd3\ufe0f Wed, April 29",
+        "location": "Hill Center @ CSL",
+        "date": "2026-04-29",
+        "start_time": "2026-04-29T23:00:00",
+        "end_time": "2026-04-30T00:00:00",
+        "source": "getinvolved",
+        "tags": [
+            "women in computer science",
+            "professional development",
+            "social event",
+            "year-end celebration"
+        ]
+    },
+    {
+        "title": "Professional Headshots",
+        "club_name": "Rutgers Women in Product ",
+        "description": "Join us on April 29,2026 from 7pm to 8pm in Busch Student Center Room 115 for free professional headshots!",
+        "location": "Busch Student Center, Room 115",
+        "date": "2026-04-29",
+        "start_time": "2026-04-29T23:00:00",
+        "end_time": "2026-04-30T00:00:00",
+        "source": "getinvolved",
+        "tags": [
+            "professional development",
+            "career services",
+            "headshots",
+            "women in tech",
+            "rutgers event"
+        ]
+    },
+    {
+        "title": "Talking Across Movement (Immigration)  TAD Monthly Dinner",
+        "club_name": "Talking Across Difference (Eagleton Institute of Politics)",
+        "description": "oin Talking Across Difference for their Talking Across Movement Event. Through this program, you will learn and discuss policies across different nations and gain a global understanding of immigration problems worldwide. Click here to register",
+        "location": "Eagleton Institute of Politics",
+        "date": "2026-04-29",
+        "start_time": "2026-04-29T22:00:00",
+        "end_time": "2026-04-30T00:00:00",
+        "source": "getinvolved",
+        "tags": [
+            "immigration policy",
+            "global affairs",
+            "political discussion"
+        ]
+    },
+    {
+        "title": "Jeopardy Trivia Night",
+        "club_name": "Society of Physics Students",
+        "description": "trivia night to destress and end the semester",
+        "location": "Serin 330W",
+        "date": "2026-04-29",
+        "start_time": "2026-04-29T23:30:00",
+        "end_time": "2026-04-30T00:30:00",
+        "source": "getinvolved",
+        "tags": [
+            "trivia night",
+            "student event",
+            "social event",
+            "game night",
+            "relaxation event"
+        ]
+    },
+    {
+        "title": "Data Science Club - Applied Deep Learning in Healthcare",
+        "club_name": "Data Science Club (Rutgers) ",
+        "description": "Join us and presenters Advik Lall and Manav Jhala to learn about applied deep learning in healthcare! Pizza will be provided. We will be auditing black box models in Medtech to understand WHY a model makes a decision.",
+        "location": "Busch Student Center Room 122ABC",
+        "date": "2026-04-29",
+        "start_time": "2026-04-29T23:30:00",
+        "end_time": "2026-04-30T00:30:00",
+        "source": "getinvolved",
+        "tags": [
+            "data science",
+            "deep learning",
+            "healthcare ai",
+            "explainable ai"
+        ]
+    },
+    {
+        "title": "Art in the Park ",
+        "club_name": "Art History Student Association (Rutgers)",
+        "description": "Come join us and color art historical coloring pages in Voorhees Mall while enjoying nature! We will also have a guest speaker presentation.",
+        "location": "Voorhees Mall ",
+        "date": "2026-04-29",
+        "start_time": "2026-04-29T23:30:00",
+        "end_time": "2026-04-30T00:30:00",
+        "source": "getinvolved",
+        "tags": [
+            "art history",
+            "outdoor event",
+            "student organization",
+            "educational activity"
+        ]
+    },
+    {
+        "title": "4/29/26 SEED Final Meeting! Pizza Party & Terrarium Building!",
+        "club_name": "Students for Environmental & Energy Development ",
+        "description": "SEED FINAL CLUB MEETING Join us for our last meeting of the year! We\u2019ll be: Presenting our posters Building terrariums Eating pizza Celebrating an amazing year together! Come hang out, get creative, and end the year with us on a fun note. Don\u2019t miss it! Wednesdays, 8:00pm-9:00pm Room 211 (Concepts Lab), Richard Weeks, Busch Campus",
+        "location": "Room 211, Richard Weeks, Busch Campus",
+        "date": "2026-04-30",
+        "start_time": "2026-04-30T00:00:00",
+        "end_time": "2026-04-30T01:00:00",
+        "source": "getinvolved",
+        "tags": [
+            "student club",
+            "environmental",
+            "social event",
+            "workshop"
+        ]
+    },
+    {
+        "title": "Cake Wars",
+        "club_name": "Jewish Allies and Queers ",
+        "description": "Unleash your inner cake decorator!\ud83e\uddd1\u200d\ud83c\udf73\ud83c\udf70 Join us for our last event this academic year! We will be hosting a cake decorating competition\ud83d\ude0b Yes, you read that right. Cakes, frosting, GO\u203c\ufe0f May the best cake win\ud83c\udfc6\ud83c\udf82\ud83d\udc40",
+        "location": "Rutgers Hillel Building - Pavlovksy Student Office",
+        "date": "2026-04-30",
+        "start_time": "2026-04-30T00:00:00",
+        "end_time": "2026-04-30T01:00:00",
+        "source": "getinvolved",
+        "tags": [
+            "jewish",
+            "lgbtq+",
+            "cake decorating",
+            "competition",
+            "social event"
+        ]
+    },
+    {
+        "title": "End of Year Party w/ Sociology Club ",
+        "club_name": "Sociology Club ",
+        "description": "Join us for our last meeting of the semester! We'll play jeopardy, have crafts, hang out, and eat food! We'll have pizza, boba, sweet treats, and more! \ud83d\udd57When? Wednesday, April 29th 8PM \ud83d\udccdWhere? Douglass - Davison Hall Room 129 \ud83d\udc65Who? Anyone!",
+        "location": "Davison Hall Room 129",
+        "date": "2026-04-30",
+        "start_time": "2026-04-30T00:00:00",
+        "end_time": "2026-04-30T01:00:00",
+        "source": "getinvolved",
+        "tags": [
+            "sociology club",
+            "end of year party",
+            "social event",
+            "food & drink"
+        ]
+    },
+    {
+        "title": "HC Summer Sendoff",
+        "club_name": "Honors College",
+        "description": "Join us on April 29th for an evening of relax and social time!\u00a0Come build gift baskets for yourself or your friends, and take a moment to decompress before finals. \ud83d\udccd Honors College, S120 \ud83d\udd50 8-9 PM",
+        "location": "HC Seminar room S120",
+        "date": "2026-04-30",
+        "start_time": "2026-04-30T00:00:00",
+        "end_time": "2026-04-30T01:00:00",
+        "source": "getinvolved",
+        "tags": [
+            "honors college",
+            "student social",
+            "stress relief",
+            "craft activity"
+        ]
+    },
+    {
+        "title": "ELECTIONS ARE THIS WEDNESDAY, 7:30-9:30PM, LSC 202AB",
+        "club_name": "Pallavi",
+        "description": "ELECTIONS ARE THIS WEDNESDAY, 7:30-9:30PM, LSC 202AB",
+        "location": "",
+        "date": "2026-04-29",
+        "start_time": "2026-04-29T21:30:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "student organization elections",
+            "general body meeting",
+            "cultural group event",
+            "membership event"
+        ]
+    },
+    {
+        "title": "Hi all! Here are our Ace the Interview slides so far. Definitely take a look at some of the resources posted in the slid",
+        "club_name": "Hasan Ali",
+        "description": "Hi all! Here are our Ace the Interview slides so far. Definitely take a look at some of the resources posted in the slides for our Arrays and Strings session. Happy practicing!\n\n9/10: Arrays and Strings: \nhttps://docs.google.com/presentation/d/1OZQpOS83ARb77taz6bpN5q9j1FCmdplNfLFtywKgU/edit?usp=sharing\n\n10/9: Stacks and Queues: https://docs.google.com/presentation/d/1j26NSatYQbr-wX6bWrotNyPf2KMwVlYCRyTR40jAJNE/edit?usp=sharing\n\n9/24: Two Pointers and Sliding Window: https://docs.google.com/presentation/d/1HLvcY50BQtjpY4Dot36mprVnVaeCLqkVYIhRxVbglLg/edit?usp=sharing",
+        "location": "",
+        "date": "2025-09-10",
+        "start_time": "2025-09-10T00:00:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "technical interview preparation",
+            "data structures and algorithms",
+            "computer science",
+            "coding practice"
+        ]
+    },
+    {
+        "title": "USACS IS HAVING A BAKE SALE! Stop by the Busch Student Center on Wednesday between 12-4 and get some sweet treats \ud83c\udf6a",
+        "club_name": "Pallavi",
+        "description": "USACS IS HAVING A BAKE SALE! Stop by the Busch Student Center on Wednesday between 12-4 and get some sweet treats \ud83c\udf6a",
+        "location": "",
+        "date": "2025-10-08",
+        "start_time": "2025-10-08T00:00:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "bake sale",
+            "fundraiser",
+            "student event",
+            "food"
+        ]
+    },
+    {
+        "title": "Join us on Thursday, September 11th, for the Tech & CodeStorm kick off event for this semester! We'll outline our tech e",
+        "club_name": "Shrika",
+        "description": "Join us on Thursday, September 11th, for the Tech & CodeStorm kick off event for this semester! We'll outline our tech events and CodeStorm semester long 'hackathon' for this fall.\nRSVP: https://forms.gle/t65umqhXdJYr4o9Q6",
+        "location": "",
+        "date": "2025-09-11",
+        "start_time": "2025-09-11T00:00:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "technology",
+            "coding",
+            "hackathon",
+            "information session"
+        ]
+    },
+    {
+        "title": "Reminder that chair applications are out and are due 6/8! Links to the applications in our Instagram bio!",
+        "club_name": "Pallavi",
+        "description": "Reminder that chair applications are out and are due 6/8! Links to the applications in our Instagram bio!",
+        "location": "",
+        "date": "2025-06-08",
+        "start_time": "2025-06-08T00:00:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "indian cultural event",
+            "student leadership",
+            "applications",
+            "recruitment"
+        ]
+    },
+    {
+        "title": "Where is speed dating for wednesday located?",
+        "club_name": "Nirmit",
+        "description": "Where is speed dating for wednesday located?",
+        "location": "is speed dating for wednesday located?",
+        "date": "2025-10-01",
+        "start_time": "2025-10-01T00:00:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Sania Shree edited to: \u201cAnnouncing our Demo Day, next week on Wednesday, April 29. I am so excited to see everyone that ",
+        "club_name": "GroupMe",
+        "description": "Sania Shree edited to: \u201cAnnouncing our Demo Day, next week on Wednesday, April 29. I am so excited to see everyone that will be demoing, its incredible to see how far everyone has come this semester in their machine learning journeys.\u201d",
+        "location": "",
+        "date": "2026-04-29",
+        "start_time": "2026-04-29T00:00:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "demo day",
+            "machine learning",
+            "student showcase",
+            "technology",
+            "academic event"
+        ]
+    },
+    {
+        "title": "Announcing our Demo Day, next week on Wednesday, April 29. I am so excited to see everyone that will be demoing, its inc",
+        "club_name": "Sania Shree",
+        "description": "Announcing our Demo Day, next week on Wednesday, April 29. I am so excited to see everyone that will be demoing, its incredible to see how far everyone has come this semester in their machine learning journeys.",
+        "location": "",
+        "date": "2026-04-29",
+        "start_time": "2026-04-29T00:00:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "namulun edited to: \u201cHey everyone! The end of the semester is quickly approaching, and so is our very first Demo Day! \ud83d\ude31\ud83e\udd29",
+        "club_name": "GroupMe",
+        "description": "namulun edited to: \u201cHey everyone! The end of the semester is quickly approaching, and so is our very first Demo Day! \ud83d\ude31\ud83e\udd29\n\nDemo Day will be on\nApril 29th, 7:30-9:30pm, and here each group can showcase their project's progress and talk about their anticipated next steps in a fun, relaxed environment. Presenters are invited to bring whatever they have\u2014a finished product is not necessary, but be prepared to talk about your project!\n\nThe event is open to all, and we definitely encourage you to invite guests! We'll have food, technical workshops and demos, and potentially sponsors and some pieces of merch for everyone to enjoy \ud83d\udc40 More details (including the location) will be announced in the weeks to come...\n\nRSVP by April 11th, 11:59pm here: https://forms.gle/hrSEhC85NiRbBCge7\n\nNote: Each group must present at Demo Day, and each person attending should fill out the RSVP form\u201d",
+        "location": "",
+        "date": "2026-04-29",
+        "start_time": "2026-04-29T21:30:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Hey everyone! The end of the semester is quickly approaching, and so is our very first Demo Day! \ud83d\ude31\ud83e\udd29",
+        "club_name": "namulun",
+        "description": "Hey everyone! The end of the semester is quickly approaching, and so is our very first Demo Day! \ud83d\ude31\ud83e\udd29\n\nDemo Day will be on\nApril 29th, 7:30-9:30pm, and here each group can showcase their project's progress and talk about their anticipated next steps in a fun, relaxed environment. Presenters are invited to bring whatever they have\u2014a finished product is not necessary, but be prepared to talk about your project!\n\nThe event is open to all, and we definitely encourage you to invite guests! We'll have food, technical workshops and demos, and potentially sponsors and some pieces of merch for everyone to enjoy \ud83d\udc40 More details (including the location) will be announced in the weeks to come...\n\nRSVP by April 11th, 11:59pm here: https://forms.gle/hrSEhC85NiRbBCge7\n\nNote: Each group must present at Demo Day, and each person attending should fill out the RSVP form",
+        "location": "",
+        "date": "2026-04-29",
+        "start_time": "2026-04-29T21:30:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "namulun edited to: \u201cLooking for an INTERNSHIP this summer? Worried about INTERVIEWS? Need some advice navigating the JOB",
+        "club_name": "GroupMe",
+        "description": "namulun edited to: \u201cLooking for an INTERNSHIP this summer? Worried about INTERVIEWS? Need some advice navigating the JOB MARKET? \ud83d\ude31 \n\nML/AI and WiCS are collaborating to host an Industry Panel featuring current students and alumni who\u2019ve bagged positions to give advice and answer any burning questions you have about the job hunting process! It will be held TOMORROW (3/11) from 7-9pm in the CSL lounge in Hill Center.\n\nFood will be provided (Insomnia Cookies \ud83d\udc40) as well. Bring your questions and RSVP using this link: https://tr.ee/gQeT-xdNu\n\nBe there or be square \ud83d\udc7e\ud83e\udd16\u201d",
+        "location": "",
+        "date": "2026-03-11",
+        "start_time": "2026-03-11T21:56:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Looking for an INTERNSHIP this summer? Worried about INTERVIEWS? Need some advice navigating the JOB MARKET? \ud83d\ude31",
+        "club_name": "namulun",
+        "description": "Looking for an INTERNSHIP this summer? Worried about INTERVIEWS? Need some advice navigating the JOB MARKET? \ud83d\ude31 \n\nML/AI and WiCS are collaborating to host an Industry Panel featuring current students and alumni who\u2019ve bagged positions to give advice and answer any burning questions you have about the job hunting process! It will be held TOMORROW (3/11) from 7-9pm in the CSL lounge in Hill Center.\n\nFood will be provided (Insomnia Cookies \ud83d\udc40) as well. Bring your questions and RSVP using this link: https://tr.ee/gQeT-xdNu\n\nBe there or be square \ud83d\udc7e\ud83e\udd16",
+        "location": "",
+        "date": "2026-03-11",
+        "start_time": "2026-03-11T21:56:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Sania Shree edited to: \u201cJust a reminder about the Transformers workshop that will be hosted on Monday:",
+        "club_name": "GroupMe",
+        "description": "Sania Shree edited to: \u201cJust a reminder about the Transformers workshop that will be hosted on Monday: \nTransformer Workshop!! This will be a beginner-friendly intro to core transformer architecture of LLMs, attention mechanisms, and how modern LLMs evolved from the iconic 2017 \"Attention Is All You Need\" paper. \n- Where: Virtual (Zoom will be sent shortly!)\n- When: Monday March 2, 7-8 pm\u201d",
+        "location": "Virtual (Zoom will be sent shortly!)",
+        "date": "2026-03-02",
+        "start_time": "2026-03-02T20:07:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Just a reminder about the Transformers workshop that will be hosted on Monday:",
+        "club_name": "Sania Shree",
+        "description": "Just a reminder about the Transformers workshop that will be hosted on Monday: \nTransformer Workshop!! This will be a beginner-friendly intro to core transformer architecture of LLMs, attention mechanisms, and how modern LLMs evolved from the iconic 2017 \"Attention Is All You Need\" paper. \n- Where: Virtual (Zoom will be sent shortly!)\n- When: Monday March 2, 7-8 pm",
+        "location": "Virtual (Zoom will be sent shortly!)",
+        "date": "2026-03-02",
+        "start_time": "2026-03-02T20:07:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Priyamvada Mantripragada edited to: \u201cJoin us for our Charity Folding Contest!",
+        "club_name": "GroupMe",
+        "description": "Priyamvada Mantripragada edited to: \u201cJoin us for our Charity Folding Contest!\nWe will be going over what, how, when, and where you can submit your origami! The most folded with best quality, will win a prize!\nPapers, and snacks will be provided!\nTuesday, March 3rd\n\ud83d\udccdBusch Student Center the COVE\n\ud83d\udd556:00-7:30 pm\u201d",
+        "location": "you can submit your origami! The most folded with best quali",
+        "date": "2026-03-03",
+        "start_time": "2026-03-03T19:30:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Join us for our Charity Folding Contest!",
+        "club_name": "Priyamvada Mantripragada",
+        "description": "Join us for our Charity Folding Contest!\nWe will be going over what, how, when, and where you can submit your origami! The most folded with best quality, will win a prize!\nPapers, and snacks will be provided!\nTuesday, March 3rd\n\ud83d\udccdBusch Student Center the COVE\n\ud83d\udd556:00-7:30 pm",
+        "location": "you can submit your origami! The most folded with best quali",
+        "date": "2026-03-03",
+        "start_time": "2026-03-03T19:30:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Join Japanese Conversation Club \u00d7 Rutgers Origami Club for a special collaboration night!",
+        "club_name": "Priyamvada Mantripragada",
+        "description": "Join Japanese Conversation Club \u00d7 Rutgers Origami Club for a special collaboration night!\n\nWe\u2019ll be practicing Japanese, folding origami, and connecting across cultures \ud83c\udf38\n\n\ud83d\udccd Murray Hall, Room 211\n\ud83d\udd57 8:00 PM \u2013 9:30 PM\n\ud83d\udcc5 Wednesday, February 18\n\nCome hang out, try something new, and meet new people. Materials provided!!",
+        "location": "211",
+        "date": "2026-02-18",
+        "start_time": "2026-02-18T20:00:00",
+        "end_time": "2026-02-18T21:30:00",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Tonight!",
+        "club_name": "Priyamvada Mantripragada",
+        "description": "Tonight!\nOur Chains & Charm Origami Night is happening TONIGHT!\n\nTuesday, February 3rd\n6:00\u20137:30 PM\n\ud83d\udccdThe Cove, Busch Student Center\n\nPapers, beads, instructions, and snacks will be provided \u2728\nBring friends and make matching charms!\n\nSee you soon!!",
+        "location": "",
+        "date": "2026-02-03",
+        "start_time": "2026-02-03T19:30:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Priyamvada Mantripragada edited to: \u201cJoin us for our chains and charm origami night!",
+        "club_name": "GroupMe",
+        "description": "Priyamvada Mantripragada edited to: \u201cJoin us for our chains and charm origami night!\nFold pieces like swans, butterflies, flowers and more to turn into charms! 2\nbring your friends to match charms\nPapers, snacks, instructions, beads and needles will all be provided!\n17\nTuesday, February 3rd\nBusch Student Center @ the COVE\n6:00-7:30 pm\u201d",
+        "location": "",
+        "date": "2026-02-03",
+        "start_time": "2026-02-03T19:30:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Join us for our chains and charm origami night!",
+        "club_name": "Priyamvada Mantripragada",
+        "description": "Join us for our chains and charm origami night!\nFold pieces like swans, butterflies, flowers and more to turn into charms! 2\nbring your friends to match charms\nPapers, snacks, instructions, beads and needles will all be provided!\n17\nTuesday, February 3rd\nBusch Student Center @ the COVE\n6:00-7:30 pm",
+        "location": "",
+        "date": "2026-02-03",
+        "start_time": "2026-02-03T19:30:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Priyamvada Mantripragada edited to: \u201cReminder!",
+        "club_name": "GroupMe",
+        "description": "Priyamvada Mantripragada edited to: \u201cReminder! \nOur General Interest Meeting is happening on\nJanuary 20th\n6\u20137:30 PM\n\ud83d\udccd The Cove, BSC\n\nMaterials and snacks will be provided! \nSee you there \u2728\u201d",
+        "location": "",
+        "date": "2026-01-20",
+        "start_time": "2026-01-20T19:30:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Reminder!",
+        "club_name": "Priyamvada Mantripragada",
+        "description": "Reminder! \nOur General Interest Meeting is happening on\nJanuary 20th\n6\u20137:30 PM\n\ud83d\udccd The Cove, BSC\n\nMaterials and snacks will be provided! \nSee you there \u2728",
+        "location": "",
+        "date": "2026-01-20",
+        "start_time": "2026-01-20T19:30:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general interest meeting",
+            "student event",
+            "club meeting",
+            "information session"
+        ]
+    },
+    {
+        "title": "Priyamvada Mantripragada edited to: \u201cHi guys!!",
+        "club_name": "GroupMe",
+        "description": "Priyamvada Mantripragada edited to: \u201cHi guys!! \nWe\u2019re excited to be back for a new semester, and our first General Interest Meeting is coming up!\n\n\ud83d\udcc5 January 20th, 6\u20137:30 PM\n\ud83d\udccd The Cove, BSC\n\nCome hang out, learn more about the club, and see what we have planned for the semester :)\n\nHope to see you there! \u2728\u201d",
+        "location": "",
+        "date": "2026-01-20",
+        "start_time": "2026-01-20T19:30:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general interest meeting",
+            "student organization event",
+            "recruitment",
+            "campus event"
+        ]
+    },
+    {
+        "title": "Hi guys!!",
+        "club_name": "Priyamvada Mantripragada",
+        "description": "Hi guys!! \nWe\u2019re excited to be back for a new semester, and our first General Interest Meeting is coming up!\n\n\ud83d\udcc5 January 20th, 6\u20137:30 PM\n\ud83d\udccd The Cove, BSC\n\nCome hang out, learn more about the club, and see what we have planned for the semester :)\n\nHope to see you there! \u2728",
+        "location": "",
+        "date": "2026-01-20",
+        "start_time": "2026-01-20T19:30:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Priyamvada Mantripragada edited to: \u201cWinter Wonderland event this Monday! \u2744\ufe0f\u26c4\ufe0f",
+        "club_name": "GroupMe",
+        "description": "Priyamvada Mantripragada edited to: \u201cWinter Wonderland event this Monday! \u2744\ufe0f\u26c4\ufe0f\n\n\nCome make winter-themed origami with us!\n\nWe\u2019ll have plenty of paper and materials ready for everyone.\n\nSee you all in our usual room, 8\u20139 PM @BSC 120ABC\u201d",
+        "location": "",
+        "date": "2025-12-01",
+        "start_time": "2025-12-01T21:50:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Winter Wonderland event this Monday! \u2744\ufe0f\u26c4\ufe0f",
+        "club_name": "Priyamvada Mantripragada",
+        "description": "Winter Wonderland event this Monday! \u2744\ufe0f\u26c4\ufe0f\n\n\nCome make winter-themed origami with us!\n\nWe\u2019ll have plenty of paper and materials ready for everyone.\n\nSee you all in our usual room, 8\u20139 PM @BSC 120ABC",
+        "location": "",
+        "date": "2025-12-01",
+        "start_time": "2025-12-01T21:49:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Hi guys! This is Priya, I\u2019m one of the Fall \u201925 interns and I\u2019ll be taking over with GroupMe announcements this week\u2728",
+        "club_name": "Priyamvada Mantripragada",
+        "description": "Hi guys! This is Priya, I\u2019m one of the Fall \u201925 interns and I\u2019ll be taking over with GroupMe announcements this week\u2728\nToday is our : \n\nAMUSE X Origami Club presents you with a:\n\nTHANKSGIVING THEMED\nORIGAMI EVENT\n\n\ud83d\udcc5November 17th 2025 8pm-9pm\n\ud83d\udccdBSC Room 120ABC\n\nPlease join us for an evening of relaxation before break and come create\nThanksgiving themed\norigami :)",
+        "location": "120ABC",
+        "date": "2025-11-17",
+        "start_time": "2025-11-17T20:19:00",
+        "end_time": "2025-11-17T21:19:00",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Hey all!",
+        "club_name": "May Takahashi",
+        "description": "Hey all! \nAs a reminder: As mentioned in our last meeting, we are now meeting biweekly, starting this most recent week. \nWe'll be posting updates each week here and on Instagram to keep you guys updated. On the off-cycles, we'll be using the room to either study, meet up for a bit before getting food, or just relax. \n\nOur officers & interns will always be present, both on meetings and off-cycle hangouts - but this is an open invite to any and all general members that would like to join us - and we'd totally love to see you there! This upcoming Monday (11/10) is our first off-cycle week, where we'll be using the room to study and relax for a bit before potentially going on a food run later in the evening.",
+        "location": "to either study",
+        "date": "2025-11-10",
+        "start_time": "2025-11-10T00:00:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Studio Ghibli this Monday, BSC @ 120ABC as usual!",
+        "club_name": "May Takahashi",
+        "description": "Studio Ghibli this Monday, BSC @ 120ABC as usual! \nWe have lots of exciting models planned, & we can\u2019t wait to see you all there \ud83d\ude1b",
+        "location": "",
+        "date": "2025-11-03",
+        "start_time": "2025-11-03T00:00:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Halloween Costume Content this Monday - lots of prize plushies and candy for everyone!!",
+        "club_name": "May Takahashi",
+        "description": "Halloween Costume Content this Monday - lots of prize plushies and candy for everyone!!\nSee you all in our usual room, 8-9PM @BSC 120ABC\n\nCostumes not mandatory, but encouraged :)",
+        "location": "",
+        "date": "2025-10-27",
+        "start_time": "2025-10-27T21:34:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Hi all! Just a heads up - as mentioned last Monday, we will NOT be having a meeting tonight (9/29) since we\u2019ll be having",
+        "club_name": "May Takahashi",
+        "description": "Hi all! Just a heads up - as mentioned last Monday, we will NOT be having a meeting tonight (9/29) since we\u2019ll be having our collab event with RAPS this Wednesday on (10/1). \nMore details to come + looking forward to seeing you all there! \ud83e\udd73\ud83e\udd73\ud83e\udd73",
+        "location": "",
+        "date": "2025-09-29",
+        "start_time": "2025-09-29T00:00:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "This coming Monday is our first Movie Night! We\u2019ll be watching Mulan - come by for lots of snacks and fun \ud83d\ude42\u200d\u2195\ufe0f\ud83c\udf7f",
+        "club_name": "May Takahashi",
+        "description": "This coming Monday is our first Movie Night! We\u2019ll be watching Mulan - come by for lots of snacks and fun \ud83d\ude42\u200d\u2195\ufe0f\ud83c\udf7f\n\nhttps://www.instagram.com/p/DO1XNtOCU20/?igsh=MXVkdG5weXYyYWx4eQ==",
+        "location": "",
+        "date": "2025-09-22",
+        "start_time": "2025-09-22T00:00:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Eldrin edited to: \u201cHey everyone! Just wanted to tell you all about our Fall 2025 Intern Application! Just to reiterate t",
+        "club_name": "GroupMe",
+        "description": "Eldrin edited to: \u201cHey everyone! Just wanted to tell you all about our Fall 2025 Intern Application! Just to reiterate this will be an opportunity for you to be mentored by our officers and experience what it\u2019s like as a part of the executive board. No experience is required, and the applications are due September 23rd! \n\nApplication Form:\nhttps://docs.google.com/forms/d/e/1FAIpQLSfK4qsHApB2mlAw8wxI3-rN6PtsTQjYpUGKSl6NM22GBy6eg/viewform?usp=sharing&ouid=109685596612449653393\u201d",
+        "location": "",
+        "date": "2025-09-23",
+        "start_time": "2025-09-23T00:00:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Hey everyone! Just wanted to tell you all about our Fall 2025 Intern Application! Just to reiterate this will be an oppo",
+        "club_name": "Eldrin",
+        "description": "Hey everyone! Just wanted to tell you all about our Fall 2025 Intern Application! Just to reiterate this will be an opportunity for you to be mentored by our officers and experience what it\u2019s like as a part of the executive board. No experience is required, and the applications are due September 23rd! \n\nApplication Form:\nhttps://docs.google.com/forms/d/e/1FAIpQLSfK4qsHApB2mlAw8wxI3-rN6PtsTQjYpUGKSl6NM22GBy6eg/viewform?usp=sharing&ouid=109685596612449653393",
+        "location": "",
+        "date": "2025-09-23",
+        "start_time": "2025-09-23T00:00:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Hey all! We'll be kicking off our fall semester THIS MONDAY with our General Interest Meeting! New members and beginners",
+        "club_name": "May Takahashi",
+        "description": "Hey all! We'll be kicking off our fall semester THIS MONDAY with our General Interest Meeting! New members and beginners welcome as always, and we'll have lots of special goodies ready for our first meeting so definitely stop by :)\nSee you on Monday at 8-9:30PM, @ Busch Student Center Room 120ABC!\n\nMore details below vvv\nhttps://www.instagram.com/p/DOROxcQiaNF/?utmsource=igwebcopylink&igsh=MzRlODBiNWFlZA==",
+        "location": "120ABC!",
+        "date": "2025-09-08",
+        "start_time": "2025-09-08T21:30:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "FINAL MEETING THIS THURSDAY!! See you all there from 8-9 PM \ufffd",
+        "club_name": "May Takahashi",
+        "description": "FINAL MEETING THIS THURSDAY!! See you all there from 8-9 PM \ufffd",
+        "location": "",
+        "date": "2025-05-01",
+        "start_time": "2025-05-01T21:07:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "This Thursday\u2019s event will be Easter themed!! See you all there :)",
+        "club_name": "May Takahashi",
+        "description": "This Thursday\u2019s event will be Easter themed!! See you all there :)",
+        "location": "",
+        "date": "2025-04-17",
+        "start_time": "2025-04-17T00:00:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "This Thursday is our biggest event yet! Make sure you don\u2019t miss our collab with JSA from 8-9 PM @ Murray Hall :)",
+        "club_name": "May Takahashi",
+        "description": "This Thursday is our biggest event yet! Make sure you don\u2019t miss our collab with JSA from 8-9 PM @ Murray Hall :)",
+        "location": "",
+        "date": "2025-04-10",
+        "start_time": "2025-04-10T21:56:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "NO MEETING TOMORROW - JSA Collab NEXT Thursday (4/10)!! Stay tuned :)",
+        "club_name": "May Takahashi",
+        "description": "NO MEETING TOMORROW - JSA Collab NEXT Thursday (4/10)!! Stay tuned :)",
+        "location": "",
+        "date": "2025-04-10",
+        "start_time": "2025-04-10T00:00:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "No usual meeting again this Thursday since we\u2019ll be having a collab with the Craft to Cure club on Monday from 8-9 PM, A",
+        "club_name": "May Takahashi",
+        "description": "No usual meeting again this Thursday since we\u2019ll be having a collab with the Craft to Cure club on Monday from 8-9 PM, AND a collab with JSA (Japanese Student Association) on Wednesday/Thursday! More details incoming soon :)",
+        "location": "",
+        "date": "2025-04-03",
+        "start_time": "2025-04-03T21:02:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Hey guys! FYI no meeting this Thursday since we\u2019ll be having a collab with RAD on Friday from 5:30-7PM at Murray Hall! M",
+        "club_name": "May Takahashi",
+        "description": "Hey guys! FYI no meeting this Thursday since we\u2019ll be having a collab with RAD on Friday from 5:30-7PM at Murray Hall! More details will be posted soon on our Insta so stay tuned \u203c\ufe0f",
+        "location": "",
+        "date": "2025-03-27",
+        "start_time": "2025-03-27T19:39:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Our General Interest Meeting for the spring is this THURSDAY, 2/6! Stop by The Hatchery @ Alexander Library from 8-9PM. ",
+        "club_name": "Aarav Yadav",
+        "description": "Our General Interest Meeting for the spring is this THURSDAY, 2/6! Stop by The Hatchery @ Alexander Library from 8-9PM. Snacks and drinks will be provided!",
+        "location": "",
+        "date": "2025-02-06",
+        "start_time": "2025-02-06T21:22:00",
+        "end_time": "",
+        "source": "groupme",
+        "tags": [
+            "general",
+            "campus life"
+        ]
+    },
+    {
+        "title": "Wellness In The Work We Do",
+        "club_name": "Minorities in Agriculture, Natural Resources and Related Sciences (The Rutgers)",
+        "description": "Addressing burnout, stress management, and maintaining mental health in demanding academic and professional spaces",
+        "location": "George H. Cook Room, CSC",
+        "date": "2026-04-29",
+        "start_time": "2026-04-29T23:15:00",
+        "end_time": "2026-04-30T00:45:00",
+        "source": "getinvolved",
+        "tags": [
+            "general",
+            "campus life"
+        ]
     }
 ]

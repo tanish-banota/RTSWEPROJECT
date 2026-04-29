@@ -1,6 +1,6 @@
 import json
 from bs4 import BeautifulSoup
-from datetime import datetime, timezone
+from datetime import datetime
 import sys
 from pathlib import Path
 
@@ -35,20 +35,18 @@ def parse_events(raw_data=None):
             raw_start = event.get("startsOn")
             raw_end = event.get("endsOn")
 
-            # convert the time from string to a datetime object, then convert to UTC
-            dt_utc_start = datetime.fromisoformat(
-                raw_start).astimezone(timezone.utc)
-            dt_utc_end = datetime.fromisoformat(
-                raw_end).astimezone(timezone.utc)
+            # GetInvolved returns times in Eastern time — parse into DateTime object and keep as-is
+            dt_start = datetime.fromisoformat(raw_start)
+            dt_end = datetime.fromisoformat(raw_end)
 
             clean_event = {
                 "title": event.get("name", ""),
                 "club_name": event.get("organizationName", ""),
                 "description": clean_html(event.get("description", "")),
                 "location": event.get("location", ""),
-                "date": dt_utc_start.strftime("%Y-%m-%d"),
-                "start_time": dt_utc_start.strftime("%Y-%m-%dT%H:%M:%SZ"),
-                "end_time": dt_utc_end.strftime("%Y-%m-%dT%H:%M:%SZ"),
+                "date": dt_start.strftime("%Y-%m-%d"),
+                "start_time": dt_start.strftime("%Y-%m-%dT%H:%M:%S"),
+                "end_time": dt_end.strftime("%Y-%m-%dT%H:%M:%S"),
                 "source": "getinvolved"
             }
 
