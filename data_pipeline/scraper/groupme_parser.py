@@ -113,7 +113,8 @@ def extract_location(text: str) -> str:
 def parse_groupme_messages(raw_data=None):
     from config import GROUPME_RAW_PATH, GROUPME_CLEAN_PATH
 
-    if raw_data is None:
+    standalone = raw_data is None
+    if standalone:
         try:
             with open(GROUPME_RAW_PATH, "r", encoding="utf-8") as f:
                 raw_data = json.load(f)
@@ -133,7 +134,8 @@ def parse_groupme_messages(raw_data=None):
                 continue
 
             # Convert Unix timestamp to Eastern so relative day resolution (e.g. "this Thursday") uses the correct local date
-            reference = datetime.fromtimestamp(msg["created_at"], tz=EASTERN).replace(tzinfo=None)
+            reference = datetime.fromtimestamp(
+                msg["created_at"], tz=EASTERN).replace(tzinfo=None)
             clean_text = strip_markdown(text)
 
             date_dt = extract_date(clean_text, reference)
@@ -150,7 +152,7 @@ def parse_groupme_messages(raw_data=None):
 
             clean_events.append({
                 "title": extract_title(clean_text),
-                "club_name": msg.get("name", ""),
+                "club_name": msg.get("_group_name", ""),
                 "description": clean_text,
                 "location": extract_location(clean_text),
                 "date": date_dt.strftime("%Y-%m-%d"),
@@ -163,11 +165,13 @@ def parse_groupme_messages(raw_data=None):
             skipped += 1
             continue
 
-    GROUPME_CLEAN_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with open(GROUPME_CLEAN_PATH, "w", encoding="utf-8") as f:
-        json.dump(clean_events, f, indent=4)
+    if standalone:
+        GROUPME_CLEAN_PATH.parent.mkdir(parents=True, exist_ok=True)
+        with open(GROUPME_CLEAN_PATH, "w", encoding="utf-8") as f:
+            json.dump(clean_events, f, indent=4)
 
-    print(f"Successfully parsed {len(clean_events)} GroupMe events! ({skipped} messages skipped)")
+    print(
+        f"Successfully parsed {len(clean_events)} GroupMe events! ({skipped} messages skipped)")
     return clean_events
 
 

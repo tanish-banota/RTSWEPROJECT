@@ -18,7 +18,8 @@ def parse_events(raw_data=None):
     from config import RAW_PATH, CLEAN_PATH
 
     # Accept raw_data directly (pipeline chaining) or fall back to reading from disk
-    if raw_data is None:
+    standalone = raw_data is None
+    if standalone:
         try:
             with open(RAW_PATH, "r", encoding="utf-8") as file:
                 raw_data = json.load(file)
@@ -35,9 +36,12 @@ def parse_events(raw_data=None):
             raw_start = event.get("startsOn")
             raw_end = event.get("endsOn")
 
+            if not raw_start:
+                continue
+
             # GetInvolved returns times in Eastern time — parse into DateTime object and keep as-is
             dt_start = datetime.fromisoformat(raw_start)
-            dt_end = datetime.fromisoformat(raw_end)
+            dt_end = datetime.fromisoformat(raw_end) if raw_end else None
 
             clean_event = {
                 "title": event.get("name", ""),
@@ -46,7 +50,7 @@ def parse_events(raw_data=None):
                 "location": event.get("location", ""),
                 "date": dt_start.strftime("%Y-%m-%d"),
                 "start_time": dt_start.strftime("%Y-%m-%dT%H:%M:%S"),
-                "end_time": dt_end.strftime("%Y-%m-%dT%H:%M:%S"),
+                "end_time": dt_end.strftime("%Y-%m-%dT%H:%M:%S") if dt_end else "",
                 "source": "getinvolved"
             }
 
@@ -55,10 +59,10 @@ def parse_events(raw_data=None):
             print(f"Skipping an event due to parsing error: {e}")
             continue
 
-    # Check if an output clean file exists, if not create one
-    CLEAN_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with open(CLEAN_PATH, "w", encoding="utf-8") as outfile:
-        json.dump(clean_events, outfile, indent=4)
+    if standalone:
+        CLEAN_PATH.parent.mkdir(parents=True, exist_ok=True)
+        with open(CLEAN_PATH, "w", encoding="utf-8") as outfile:
+            json.dump(clean_events, outfile, indent=4)
 
     print(f"Successfully cleaned {len(clean_events)} events!")
     return clean_events

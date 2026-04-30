@@ -85,9 +85,12 @@ def fetch_groupme_announcements():
     for group_id in group_ids:
         try:
             print(f"  Fetching group {group_id}...")
+            group_resp = _get(f"{GROUPME_API_BASE}/groups/{group_id}", {"token": token})
+            group_name = group_resp.json().get("response", {}).get("name", group_id)
             messages = fetch_group_messages(group_id, token)
             for msg in messages:
                 msg["_group_id"] = group_id
+                msg["_group_name"] = group_name
             all_messages.extend(messages)
             print(f"  Fetched {len(messages)} messages from group {group_id}.")
         except requests.exceptions.HTTPError as e:

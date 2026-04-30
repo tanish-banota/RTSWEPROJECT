@@ -118,7 +118,8 @@ def extract_location(text: str) -> str:
 def parse_discord_messages(raw_data=None):
     from config import DISCORD_RAW_PATH, DISCORD_CLEAN_PATH
 
-    if raw_data is None:
+    standalone = raw_data is None
+    if standalone:
         try:
             with open(DISCORD_RAW_PATH, "r", encoding="utf-8") as f:
                 raw_data = json.load(f)
@@ -168,9 +169,10 @@ def parse_discord_messages(raw_data=None):
             skipped += 1
             continue
 
-    DISCORD_CLEAN_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with open(DISCORD_CLEAN_PATH, "w", encoding="utf-8") as f:
-        json.dump(clean_events, f, indent=4)
+    if standalone:
+        DISCORD_CLEAN_PATH.parent.mkdir(parents=True, exist_ok=True)
+        with open(DISCORD_CLEAN_PATH, "w", encoding="utf-8") as f:
+            json.dump(clean_events, f, indent=4)
 
     print(
         f"Successfully parsed {len(clean_events)} Discord events! ({skipped} messages skipped)")
