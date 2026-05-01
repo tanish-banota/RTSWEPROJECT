@@ -284,5 +284,31 @@
         "tags": [
             "academic"
         ]
+    },
+        {
+        "title": "Karaoke",
+        "club_name": "Karaoke Club",
+        "description": "Join us for a fun night of karaoke.",
+        "location": "Douglass Student Center",
+        "date": "2026-09-24",
+        "start_time": "2026-09-24T23:30:00Z",
+        "end_time": "2026-09-25T01:00:00Z",
+        "source": "getinvolved",
+        "tags": [
+            "academic"
+        ]
+    },
+    {
+        "title": "2016 Themed Karaoke",
+        "club_name": "Fusion: The Rutgers Union of Mixed People",
+        "description": "Join us March 24th at 7:30pm for some 2016 karaoke. Lets bring back 2016 vibes a decade later! This meeting will take place at the Rutgers Room @ Douglass Student Center.",
+        "location": "Rutgers Room @ Douglass Student Center",
+        "date": "2026-03-24",
+        "start_time": "2026-03-24T23:30:00Z",
+        "end_time": "2026-03-25T01:00:00Z",
+        "source": "getinvolved",
+        "tags": [
+            "academic"
+        ]
     }
 ]
