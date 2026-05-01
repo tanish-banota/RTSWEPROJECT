@@ -2,7 +2,7 @@
 
 import { useRouter, useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { mockEvents, Event } from "@/lib/mockData";
+import { getEvents, Event } from "@/lib/api";
 
 export default function EventDetail() {
   const router = useRouter();
@@ -10,21 +10,36 @@ export default function EventDetail() {
 
   const [event, setEvent] = useState<Event | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const id = params.id as string;
 
-    // Simulate API fetch
-    setTimeout(() => {
-      const foundEvent = mockEvents.find((e) => e.id === id) || null;
-      setEvent(foundEvent);
-      setLoading(false);
-    }, 300);
+    const fetchEvent = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        const events = await getEvents();
+        const foundEvent = events.find((e) => e.id === id) || null;
+        setEvent(foundEvent);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Failed to fetch event");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchEvent();
   }, [params.id]);
 
   // Loading state
   if (loading) {
     return <p className="p-6">Loading event...</p>;
+  }
+
+  // Error state
+  if (error) {
+    return <p className="p-6 text-red-500">Error: {error}</p>;
   }
 
   // Not found state
@@ -43,12 +58,12 @@ export default function EventDetail() {
       </button>
 
       <h1 className="text-2xl font-bold mb-2">{event.title}</h1>
-      <p className="text-gray-600 mb-2">{event.club}</p>
-      <p className="mb-2">
+      <p className="text-white-600 mb-2">{event.club}</p>
+      <p className="text-white-600 mb-2">
         {new Date(event.date).toLocaleString()}
       </p>
-      <p className="mb-4">{event.location}</p>
-
+      <p className="text-white-600 mb-4">{event.location}</p>
+      <p className="text-white-700 leading-relaxed">{event.description}</p>
     </div>
   );
 }

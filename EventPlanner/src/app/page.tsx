@@ -33,19 +33,12 @@ export default function Home() {
       </div>
 
       {/* FEATURE SECTION */}
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl">
+      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
         
         <div className="p-4 bg-black rounded-lg shadow">
           <h3 className="font-semibold mb-2">📅 Stay Updated</h3>
           <p className="text-sm text-gray-600">
             Never miss a meeting — we gather events from multiple sources.
-          </p>
-        </div>
-
-        <div className="p-4 bg-black rounded-lg shadow">
-          <h3 className="font-semibold mb-2">⭐ Personalized</h3>
-          <p className="text-sm text-gray-600">
-            Get recommendations based on your interests.
           </p>
         </div>
 

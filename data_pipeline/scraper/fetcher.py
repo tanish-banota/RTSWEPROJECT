@@ -1,14 +1,24 @@
+from datetime import datetime, timezone
+from urllib.parse import quote
 import requests
 import json
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 
 def fetch_events():
-    # URL gotten for scrapping after API Interception
-    url = "https://rutgers.campuslabs.com/engage/api/discovery/event/search?endsAfter=2026-03-24T14%3A05%3A10-04%3A00&orderByField=endsOn&orderByDirection=ascending&status=Approved&take=15&query="
+    from config import RAW_PATH
 
-    # Websites often block automated requests.
-    # Passing a standard User-Agent header mimics a normal web browser.
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S+00:00")
+    url = (
+        f"https://rutgers.campuslabs.com/engage/api/discovery/event/search"
+        f"?endsAfter={quote(now)}"
+        f"&orderByField=endsOn&orderByDirection=ascending"
+        f"&status=Approved&take=15&query="
+    )
+
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "Accept": "application/json"
@@ -18,27 +28,15 @@ def fetch_events():
 
     try:
         response = requests.get(url, headers=headers)
-        response.raise_for_status()  # Catch HTTP errors like 404
+        response.raise_for_status()
 
-        # Parse the response into a Python dictionary(JSON format)
         raw_data = response.json()
 
-        # --- UPDATED SECTION START ---
-        # 1. Anchor to the data_pipeline directory
-        SCRIPT_DIR = Path(__file__).resolve().parent
-        PIPELINE_DIR = SCRIPT_DIR.parent
-        # 2. Build the absolute path to your raw.json file
-        file_path = PIPELINE_DIR / "data" / "raw" / "raw.json"
-
-        # 3. Ensure the nested directories exist before saving
-        file_path.parent.mkdir(parents=True, exist_ok=True)
-        # --- UPDATED SECTION END ---
-
-        # Export the raw JSON onto the file
-        with open(file_path, "w", encoding="utf-8") as file:
+        RAW_PATH.parent.mkdir(parents=True, exist_ok=True)
+        with open(RAW_PATH, "w", encoding="utf-8") as file:
             json.dump(raw_data, file, indent=4)
 
-        print(f"Success! Raw data saved to {file_path}")
+        print(f"Success! Raw data saved to {RAW_PATH}")
         return raw_data
 
     except requests.exceptions.RequestException as e:

@@ -1,0 +1,6 @@
+{
+  "extraPaths": [
+    "data_pipeline",
+    "server"
+  ]
+}

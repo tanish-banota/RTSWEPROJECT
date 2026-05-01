@@ -1,0 +1,45 @@
+name: Weekly Data Pipeline
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    
+    # Force all 'run' commands to execute inside data_pipeline folder
+    defaults:
+      run:
+        working-directory: './data_pipeline'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install dependencies
+        # Because of the working-directory setting above, 
+        # this will correctly find the requirements.txt inside 'data_pipeline'
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Execute Pipeline
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY}}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY}}
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          DISCORD_CHANNEL_IDS: ${{ secrets.DISCORD_CHANNEL_IDS }}
+          GROUPME_ACCESS_TOKEN: ${{ secrets.GROUPME_ACCESS_TOKEN }}
+          GROUPME_GROUP_IDS: ${{ secrets.GROUPME_GROUP_IDS }}
+        # This will correctly execute the script inside 'data pipeline'
+        run: |
+          python run_pipeline.py

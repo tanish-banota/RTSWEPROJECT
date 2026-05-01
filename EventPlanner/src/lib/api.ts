@@ -5,6 +5,7 @@ export type Event = {
   date: string;
   club: string;
   location: string;
+  description: string;
 };
 
 export const getEvents = async (): Promise<Event[]> => {
