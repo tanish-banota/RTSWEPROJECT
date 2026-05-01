@@ -58,7 +58,7 @@ export default function EventDetail() {
       </button>
 
       <h1 className="text-2xl font-bold mb-2">{event.title}</h1>
-      <p className="text-white-600 mb-2">{event.club}</p>
+      <p className="text-white-600 mb-2">{event.club_name}</p>
       <p className="text-white-600 mb-2">
         {new Date(event.date).toLocaleString()}
       </p>

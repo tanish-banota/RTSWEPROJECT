@@ -19,9 +19,10 @@ def get_events():
                 "id": str(event.get("id", "")),
                 "title": event.get("title", ""),
                 "date": event.get("start_time", ""),
-                "club": event.get("club", ""),
+                "club_name": event.get("club", ""),
                 "location": event.get("location", ""),
-                "description": event.get("description", "")
+                "description": event.get("description", ""),
+                "tags": event.get("tags", "")
             })
         
         return jsonify(formatted_events), 200

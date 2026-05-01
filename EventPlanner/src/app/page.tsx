@@ -1,54 +1,58 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-black-50 px-6">
-      
-      {/* HERO SECTION */}
-      <div className="max-w-2xl text-center">
-        <h1 className="text-4xl font-bold mb-4">
-          Discover Campus Events Effortlessly
-        </h1>
-
-        <p className="text-gray-600 text-lg mb-8">
-          Find club meetings, networking events, and social gatherings — all in one place.
-        </p>
-
-        {/* CTA BUTTONS */}
-        <div className="flex gap-4 justify-center">
-          <Link
-            href="/feed"
-            className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg"
-          >
-            Explore Events
-          </Link>
-
-          <Link
-            href="/login"
-            className="border border-gray-300 px-6 py-3 rounded-lg hover:bg-gray-100"
-          >
-            Login
-          </Link>
-        </div>
-      </div>
-
-      {/* FEATURE SECTION */}
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
-        
-        <div className="p-4 bg-black rounded-lg shadow">
-          <h3 className="font-semibold mb-2">📅 Stay Updated</h3>
-          <p className="text-sm text-gray-600">
-            Never miss a meeting — we gather events from multiple sources.
-          </p>
+    <div className="min-h-screen bg-slate-50 py-14 px-6 text-slate-950">
+      <div className="mx-auto flex w-full max-w-5xl flex-col gap-12">
+        <div className="rounded-[2rem] border border-slate-200 bg-white/95 p-10 shadow-[0_40px_120px_-40px_rgba(15,23,42,0.35)] backdrop-blur-xl">
+          <div className="max-w-3xl text-center mx-auto">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-sky-600">
+              Campus events, simplified
+            </p>
+            <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl">
+              Discover campus events effortlessly.
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
+              Find club meetings, networking events, and social gatherings — all in one place.
+            </p>
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <Link
+                href="/feed"
+                className="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-sky-600 to-indigo-600 px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition hover:from-sky-700 hover:to-indigo-700"
+              >
+                Explore Events
+              </Link>
+              <Link
+                href="/login"
+                className="inline-flex items-center justify-center rounded-2xl border border-slate-300 bg-white px-8 py-4 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
+              >
+                Login
+              </Link>
+            </div>
+          </div>
         </div>
 
-        <div className="p-4 bg-black rounded-lg shadow">
-          <h3 className="font-semibold mb-2">💬 Connect</h3>
-          <p className="text-sm text-gray-600">
-            RSVP and chat with others attending the same events.
-          </p>
-        </div>
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="rounded-[1.5rem] border border-slate-200 bg-slate-950 p-7 shadow-lg shadow-slate-900/10">
+            <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-sky-600 text-white shadow-sm">
+              📅
+            </div>
+            <h3 className="text-xl font-semibold text-white">Stay Updated</h3>
+            <p className="mt-3 text-sm leading-7 text-slate-300">
+              Never miss a meeting — we gather events from multiple sources and keep your calendar in sync.
+            </p>
+          </div>
 
+          <div className="rounded-[1.5rem] border border-slate-200 bg-slate-950 p-7 shadow-lg shadow-slate-900/10">
+            <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-indigo-600 text-white shadow-sm">
+              💬
+            </div>
+            <h3 className="text-xl font-semibold text-white">Connect</h3>
+            <p className="mt-3 text-sm leading-7 text-slate-300">
+              RSVP and connect with others attending the same events, all from your feed.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
