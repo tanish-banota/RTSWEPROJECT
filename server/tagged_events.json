@@ -1,12 +1,12 @@
 [
     {
-        "title": "Jeopardy Trivia Night",
-        "club_name": "Society of Physics Students",
-        "description": "trivia night to destress and end the semester",
-        "location": "Serin 330W",
-        "date": "2026-04-29",
-        "start_time": "2026-04-29T23:30:00",
-        "end_time": "2026-04-30T00:30:00",
+        "title": "International Academic Conference: \u201cArt and Dissent in the Soviet Era: The Dodge Collection and Its Global Legacy\u201d (Day 2)",
+        "club_name": "J Voorhees Zimmerli Art Museum",
+        "description": "Visit our Event Calendar for all details & updates, including RSVP links! February 28 Concert: SSAAM Heritage Singers March 8 Concert and Talk. From Past to Present: Armenian Music with Trio Fadolin & Ara Dinkjian March 11 Polaroid Workshop March 20 VIRTUAL LECTURE: Bodies of Dissent: Performance Art in Armenia April 16 Polaroid Workshop April 22 Book Talk: Gail Levin April 29 \"Conspicuous by their absence\": Curatorial Discussion with Amber N. Wiley and Diana Greenwald April 30-May 1 International Academic Conference: \u201cArt and Dissent in the Soviet Era: The Dodge Collection and Its Global Legacy\u201d",
+        "location": "Zimmerli Art Museum",
+        "date": "2026-05-01",
+        "start_time": "2026-05-01T14:00:00",
+        "end_time": "2026-05-01T21:00:00",
         "source": "getinvolved",
         "tags": [
             "general",
@@ -14,13 +14,13 @@
         ]
     },
     {
-        "title": "Data Science Club - Applied Deep Learning in Healthcare",
-        "club_name": "Data Science Club (Rutgers) ",
-        "description": "Join us and presenters Advik Lall and Manav Jhala to learn about applied deep learning in healthcare! Pizza will be provided. We will be auditing black box models in Medtech to understand WHY a model makes a decision.",
-        "location": "Busch Student Center Room 122ABC",
-        "date": "2026-04-29",
-        "start_time": "2026-04-29T23:30:00",
-        "end_time": "2026-04-30T00:30:00",
+        "title": "EcoGSA",
+        "club_name": "Ecology and Evolution Graduate Student Association (Graduate Organization)",
+        "description": "General Meeting for EcoGSa",
+        "location": "ENR 123",
+        "date": "2026-05-01",
+        "start_time": "2026-05-01T20:00:00",
+        "end_time": "2026-05-01T21:00:00",
         "source": "getinvolved",
         "tags": [
             "general",
@@ -28,13 +28,13 @@
         ]
     },
     {
-        "title": "Art in the Park ",
-        "club_name": "Art History Student Association (Rutgers)",
-        "description": "Come join us and color art historical coloring pages in Voorhees Mall while enjoying nature! We will also have a guest speaker presentation.",
-        "location": "Voorhees Mall ",
-        "date": "2026-04-29",
-        "start_time": "2026-04-29T23:30:00",
-        "end_time": "2026-04-30T00:30:00",
+        "title": "Ice Cream Trucks",
+        "club_name": "Rutgers University Programming Association",
+        "description": "Come join us for some FREE ice cream to cool off in the summer heat! Keep an eye on our story all day on April 30th and May 1st to find out where you can get some free ice cream!",
+        "location": "Busch/College Ave",
+        "date": "2026-05-01",
+        "start_time": "2026-05-01T16:00:00",
+        "end_time": "2026-05-01T22:00:00",
         "source": "getinvolved",
         "tags": [
             "general",
@@ -42,13 +42,13 @@
         ]
     },
     {
-        "title": "Wellness In The Work We Do",
-        "club_name": "Minorities in Agriculture, Natural Resources and Related Sciences (The Rutgers)",
-        "description": "Addressing burnout, stress management, and maintaining mental health in demanding academic and professional spaces",
-        "location": "George H. Cook Room, CSC",
-        "date": "2026-04-29",
-        "start_time": "2026-04-29T23:15:00",
-        "end_time": "2026-04-30T00:45:00",
+        "title": "Carnaval",
+        "club_name": "Sociedad Estudiantil Dominicana",
+        "description": "...CARNAVAL 2026....Bringing back our annual Carnaval, Friday, May 1st with an updated TIME CHANGE, 3-7PM! Thank you to all our cosponsors and performers Come ready to vibe with your favorite domi's with good music, performances, and FREE FOOD, AND GIFT CARD PRIZES... So make sure to come to Deiner Park, May 1st from 3-7pm",
+        "location": "DEINER PARK",
+        "date": "2026-05-01",
+        "start_time": "2026-05-01T19:00:00",
+        "end_time": "2026-05-01T23:00:00",
         "source": "getinvolved",
         "tags": [
             "general",
@@ -56,13 +56,13 @@
         ]
     },
     {
-        "title": "Pitch Meeting",
-        "club_name": "Medium (The)",
-        "description": "Weekly Pitch Meeting",
-        "location": "LSC 109",
-        "date": "2026-04-29",
-        "start_time": "2026-04-29T23:30:00",
-        "end_time": "2026-04-30T00:45:00",
+        "title": "Friday Night Fellowship",
+        "club_name": "Reformed University Fellowship",
+        "description": "Our weekly gathering to enjoy time with friends and to listen, discuss, and ask questions about a teaching from the Bible.",
+        "location": "Livingston Student Center 201",
+        "date": "2026-05-01",
+        "start_time": "2026-05-01T22:00:00",
+        "end_time": "2026-05-01T23:30:00",
         "source": "getinvolved",
         "tags": [
             "general",
@@ -70,144 +70,104 @@
         ]
     },
     {
-        "title": "4/29/26 SEED Final Meeting! Pizza Party & Terrarium Building!",
-        "club_name": "Students for Environmental & Energy Development ",
-        "description": "SEED FINAL CLUB MEETING Join us for our last meeting of the year! We\u2019ll be: Presenting our posters Building terrariums Eating pizza Celebrating an amazing year together! Come hang out, get creative, and end the year with us on a fun note. Don\u2019t miss it! Wednesdays, 8:00pm-9:00pm Room 211 (Concepts Lab), Richard Weeks, Busch Campus",
-        "location": "Room 211, Richard Weeks, Busch Campus",
-        "date": "2026-04-30",
-        "start_time": "2026-04-30T00:00:00",
-        "end_time": "2026-04-30T01:00:00",
-        "source": "getinvolved",
-        "tags": [
-            "general",
-            "campus life"
-        ]
+        "title": "Glow in the Dark Painting!",
+        "club_name": "Scarlet Arts Rx (Affiliated with a Mason Gross School of the Arts Department)",
+        "description": "Free, open to all students and friends! Plus, snacks and prizes! In collaboration with Liquitex!",
+        "location": "Newell Apartments (Rutgers Cook/Doug campus)",
+        "date": "2026-05-01",
+        "start_time": "2026-05-01T22:00:00",
+        "end_time": "2026-05-02T00:00:00",
+        "source": "getinvolved"
     },
     {
-        "title": "Visiting Artist Lecture - Abigail Lucien ",
-        "club_name": "Mason Gross Art and Design (Mason Gross Graduate Student Association)",
-        "description": "Please join us for a visiting artist lecture, featuring Abigail Lucien. The lecture begins at 7pm in room 110 at Civic Square Building (CSB). Complimentary dinner will be served 1 hour before the start of the talk. Free and open to the public.",
-        "location": "Civic Square Building - CSB",
-        "date": "2026-04-29",
-        "start_time": "2026-04-29T22:00:00",
-        "end_time": "2026-04-30T01:00:00",
-        "source": "getinvolved",
-        "tags": [
-            "general",
-            "campus life"
-        ]
+        "title": "Study & Sip",
+        "club_name": "Educational Opportunity Program Student Association",
+        "description": "Pull up to EOPSA\u2019s Study & Sip \ud83d\udcda\ud83e\uddcb We are having a chill study session with free BOBA Get your work done, pick up some study tips, and grab some snacks and BOBA while you\u2019re at it.\ud83e\uddcb\ud83c\udf6a Location: The Hatchery in Alexander Library on May 1 at 6 PM Good vibes, good focus, and even better company!!!",
+        "location": "The Hatchery in Alexander Library",
+        "date": "2026-05-01",
+        "start_time": "2026-05-01T22:00:00",
+        "end_time": "2026-05-02T00:00:00",
+        "source": "getinvolved"
     },
     {
-        "title": "Commuter Study Knights",
-        "club_name": "Rutgers Commuter Student Association",
-        "description": "Finals are almost here! Stop by for a quiet, commuter-friendly study space with free snacks to keep you fueled. Whether you\u2019re finishing papers or cramming for exams, we\u2019ve got you covered.",
-        "location": "Busch Student Center, Commuter Lounge",
-        "date": "2026-04-29",
-        "start_time": "2026-04-29T22:00:00",
-        "end_time": "2026-04-30T01:00:00",
-        "source": "getinvolved",
-        "tags": [
-            "general",
-            "campus life"
-        ]
+        "title": "Trivia Night",
+        "club_name": "RU Tamil",
+        "description": "Join us for trivia night!",
+        "location": "Livingston Student Center",
+        "date": "2026-05-01",
+        "start_time": "2026-05-01T23:00:00",
+        "end_time": "2026-05-02T02:00:00",
+        "source": "getinvolved"
     },
     {
-        "title": "Cake Wars",
-        "club_name": "Jewish Allies and Queers ",
-        "description": "Unleash your inner cake decorator!\ud83e\uddd1\u200d\ud83c\udf73\ud83c\udf70 Join us for our last event this academic year! We will be hosting a cake decorating competition\ud83d\ude0b Yes, you read that right. Cakes, frosting, GO\u203c\ufe0f May the best cake win\ud83c\udfc6\ud83c\udf82\ud83d\udc40",
-        "location": "Rutgers Hillel Building - Pavlovksy Student Office",
-        "date": "2026-04-30",
-        "start_time": "2026-04-30T00:00:00",
-        "end_time": "2026-04-30T01:00:00",
-        "source": "getinvolved",
-        "tags": [
-            "general",
-            "campus life"
-        ]
+        "title": "Biosciences Mixer: Year-End Party!!",
+        "club_name": "Association of Undergraduate Geneticists",
+        "description": "\ud83e\uddec\ud83e\udda0\ud83e\uddeaWrap up the semester at our Biosciences Mixer: Year-End Party! \ud83e\uddec\ud83e\udda0\ud83e\uddea Meet the teams behind Designer Genes, AUG, CBN Society,\u00a0oSTEM, G.H. Cook, MBB Society, and Rutgers MANRRS\u00a0\u2697\ufe0f\ud83d\udd2c Stay for food\ud83c\udf55, board games \ud83c\udfae, and slime-making & origami \ud83c\udfa8. Open to all Rutgers students!\u00a0\ud83d\ude0a Please RSVP and note which group you are most affiliated with so that we have enough supplies for everyone!!",
+        "location": "Life Science Building Atrium",
+        "date": "2026-05-02",
+        "start_time": "2026-05-02T00:00:00",
+        "end_time": "2026-05-02T02:00:00",
+        "source": "getinvolved"
     },
     {
-        "title": "End of Year Party w/ Sociology Club ",
-        "club_name": "Sociology Club ",
-        "description": "Join us for our last meeting of the semester! We'll play jeopardy, have crafts, hang out, and eat food! We'll have pizza, boba, sweet treats, and more! \ud83d\udd57When? Wednesday, April 29th 8PM \ud83d\udccdWhere? Douglass - Davison Hall Room 129 \ud83d\udc65Who? Anyone!",
-        "location": "Davison Hall Room 129",
-        "date": "2026-04-30",
-        "start_time": "2026-04-30T00:00:00",
-        "end_time": "2026-04-30T01:00:00",
-        "source": "getinvolved",
-        "tags": [
-            "general",
-            "campus life"
-        ]
+        "title": "Senior Sendoff",
+        "club_name": "Women's Gaming League (Rutgers)",
+        "description": "Senior Sendoff! Hey everyone! Join us this Friday, 5/1 from 8-10pm in SERC 208 for our final meeting of the year! We'll be celebrating our graduating seniors and eboard members with grad cap decorating and some board games! Feel free to bring your grad cap as decorations will be provided, and for those not graduating we will have picture frames available for decorating as well! We hope you all have had as much fun this year at WGL as we have, and we wish you the best of luck on finals! See you guys there!",
+        "location": "SERC",
+        "date": "2026-05-02",
+        "start_time": "2026-05-02T00:00:00",
+        "end_time": "2026-05-02T02:00:00",
+        "source": "getinvolved"
     },
     {
-        "title": "HC Summer Sendoff",
-        "club_name": "Honors College",
-        "description": "Join us on April 29th for an evening of relax and social time!\u00a0Come build gift baskets for yourself or your friends, and take a moment to decompress before finals. \ud83d\udccd Honors College, S120 \ud83d\udd50 8-9 PM",
-        "location": "HC Seminar room S120",
-        "date": "2026-04-30",
-        "start_time": "2026-04-30T00:00:00",
-        "end_time": "2026-04-30T01:00:00",
-        "source": "getinvolved",
-        "tags": [
-            "general",
-            "campus life"
-        ]
+        "title": " FACILE- French Gala! : Une Nuit A Paris!",
+        "club_name": "French Arts Culture & Inclusive Language Experience ",
+        "description": "Une Nuit \u00e0 Paris \u2728 Join us for our FINAL event of the year, a magical French Gala inspired by Parisian nights \ud83e\udd50\ud83c\udfb6 \ud83d\uddd3 Friday, May 1st \u23f0 8\u201310 PM \ud83d\udccd CASC Room 411 ABC Think: candlelight, jazz, caf\u00e9 vibes, performances, photo booth, and dancing. \ud83c\udf70 French treats \ud83d\udcf8 Paris-themed photo corner \ud83c\udfa4 Music + performances \ud83c\udf9f Raffle + prizes Dress code: Parisian Chic (optional but encouraged) Bring your friends and come experience a night in Paris with us before closing a chapter! This is a FREE event open to all Rutgers students! Pls RSVP to ensure we have enough food for everyone!",
+        "location": "College Avenue Student Center (Room 411 ABC)",
+        "date": "2026-05-02",
+        "start_time": "2026-05-02T00:00:00",
+        "end_time": "2026-05-02T02:00:00",
+        "source": "getinvolved"
     },
     {
-        "title": "\"Wounds of Pyre\" Film Screening + Q&A with the Directors",
-        "club_name": "Rutgers Anti-Caste Collective",
-        "description": "Wounds of Pyre, Inside the Minds of Cremation Workers (2025) is a documentary by Babita Gautam and Sahil Valmiki that follows the Dom community in Varanasi. The Doms are cremation workers who caste binds to the burning ghats through the caste-imposed duty of burning the dead. The film explores the psychological toll of caste-based labour, generational trauma, and the invisibility forced on cremation workers performing society's rituals. Babita and Sahil are journalists and filmmakers from the Dalit community and co-founders of Dalit Desk, an independent media outlet covering caste and gender issues in India. The film has screened at MIT, IIT Delhi, and the Gregson Arts and Community Centre in the UK, and received an Honourable Mention at the Athens International Monthly Art Film Festival. The directors will join via Zoom for a Q&A after the screening.",
-        "location": "Room 100, Milledoler Hall",
-        "date": "2026-04-29",
-        "start_time": "2026-04-29T22:30:00",
-        "end_time": "2026-04-30T01:30:00",
-        "source": "getinvolved",
-        "tags": [
-            "general",
-            "campus life"
-        ]
+        "title": "Late Knight with Caleb Hearon",
+        "club_name": "Student Centers and Activities (Department of)",
+        "description": "Get ready for a night of laughs and unfiltered conversation at Late Knight! Join us for a moderated Q&A with comedian and writer Caleb Hearon, known for his sharp wit, viral sketches, and unapologetically honest takes on life, pop culture, and everything in between. Caleb has built a massive following through his hilarious social media presence and podcast appearances, bringing a unique blend of storytelling, sarcasm, and chaos that keeps audiences hooked. Whether\u00a0you\u2019ve\u00a0seen his viral videos or are just looking for a fun Friday night, this is your chance to hear directly from one of comedy\u2019s rising voices. \ud83c\udfa4 Event Details Who:\u00a0@calebsaysthings Where:\u00a0College Avenue Student Center - MPR When:\u00a0Doors Open\u00a0@\u00a09:00 PM\u00a0|\u00a0Show Starts\u00a0@\u00a09:30 PM Co-sponsored with\u00a0@RUPArutgers \ud83c\udf9f Important Info Open to Rutgers\u2013New Brunswick students only RSVP\u00a0required\u00a0on\u00a0getINVOLVED\u00a0\u2014 seats are limited!",
+        "location": "College Avenue Student Center MPR",
+        "date": "2026-05-02",
+        "start_time": "2026-05-02T01:00:00",
+        "end_time": "2026-05-02T03:00:00",
+        "source": "getinvolved"
     },
     {
-        "title": "HSC General Meeting-Ram Navami Edition",
-        "club_name": "Hindu Students Council (Rutgers) ",
-        "description": "Join us in celebrating Hindu values with some activities and food!",
-        "location": "BSC 120 ABC",
-        "date": "2026-04-30",
-        "start_time": "2026-04-30T00:30:00",
-        "end_time": "2026-04-30T02:00:00",
-        "source": "getinvolved",
-        "tags": [
-            "general",
-            "campus life"
-        ]
+        "title": "RULing 2026",
+        "club_name": "Linguistics Graduate Student Association (Graduate Organization)",
+        "description": "The Linguistics Graduate Student Association invites you to the 21st annual RULing conference, our end-of-the year departmental conference/workshop. Graduate students from our department will be presenting their work. This year's edition of RULing will host a special panel on industry jobs from three alumni: Vandana Bajaj, Ang Li, and Nate Koser. Lunch will be provided at the mid-day break! All graduate students are welcome to attend the event. This event is funded by the Graduate Student Association (GSA).",
+        "location": "Linguistics Department",
+        "date": "2026-05-02",
+        "start_time": "2026-05-02T12:30:00",
+        "end_time": "2026-05-02T21:00:00",
+        "source": "getinvolved"
     },
     {
-        "title": "Our Year in Portraits",
-        "club_name": "Honors College",
-        "description": "Join 3 South as we celebrate the end of your first year with an indoor picnic, good food, and a collaborative painting activity where you\u2019ll rotate in groups, each contributing to one another\u2019s canvases, so everyone leaves with a personalized piece capturing the people who made this year special!",
-        "location": "3 South Lounge",
-        "date": "2026-04-30",
-        "start_time": "2026-04-30T01:00:00",
-        "end_time": "2026-04-30T02:00:00",
-        "source": "getinvolved",
-        "tags": [
-            "general",
-            "campus life"
-        ]
+        "title": "AXON 7.0",
+        "club_name": "Nu Rho Psi ",
+        "description": "Nu Rho Psi is hosting AXON 7.0, our annual neuroscience research conference! We welcome presenters from all over the Northeast to talk about their neuroscience research. Join our Symposium for the opportunity to learn about research and connect with researchers from all over the Northeast. If you would like to present your research, you also have the chance to win an award! We are open to all disciplines (psych, cog sci, etc) as long as it falls under the neuroscience umbrella! We also have virtual options to present! The conference will be held on May 2nd in Psych 105 (times may be subject to change based on the itinerary For more information visit our website, where you can register for the conference and submit your abstract:\u00a0https://axon2026.myportfolio.com/",
+        "location": "Psych 105",
+        "date": "2026-05-02",
+        "start_time": "2026-05-02T16:00:00",
+        "end_time": "2026-05-02T21:00:00",
+        "source": "getinvolved"
     },
     {
-        "title": "Photography Club General Meeting ",
-        "club_name": "Photography Club (Rutgers) ",
-        "description": "The purpose of the Rutgers University Photography Club is to create a community for fellow photographers to share their knowledge, techniques, ideas, and friendship with one another.",
-        "location": "College Ave Student Center",
-        "date": "2026-04-29",
-        "start_time": "2026-04-29T23:00:00",
-        "end_time": "2026-04-30T02:00:00",
-        "source": "getinvolved",
-        "tags": [
-            "general",
-            "campus life"
-        ]
+        "title": "Writing a Life",
+        "club_name": "Institute for Women's Leadership (Rutgers University) ",
+        "description": "Join Dr. Roxane Gay for a full day conference about memoir. Learn how authors write about how their lived experiences have shaped them and how they move through the world. The day will feature a keynote, workshops, and an editors and agents panel. Books by all speakers will be available for purchase. Register at\u00a0go.rutgers.edu/1ew1a9ia",
+        "location": "Rutgers Academic Building",
+        "date": "2026-05-02",
+        "start_time": "2026-05-02T13:00:00",
+        "end_time": "2026-05-02T21:30:00",
+        "source": "getinvolved"
     },
     {
         "title": "ELECTIONS ARE THIS WEDNESDAY, 7:30-9:30PM, LSC 202AB",
@@ -217,11 +177,7 @@
         "date": "2026-04-29",
         "start_time": "2026-04-29T21:30:00",
         "end_time": "",
-        "source": "groupme",
-        "tags": [
-            "general",
-            "campus life"
-        ]
+        "source": "groupme"
     },
     {
         "title": "Join us for our Charity Folding Contest!",
@@ -231,11 +187,7 @@
         "date": "2026-03-03",
         "start_time": "2026-03-03T19:30:00",
         "end_time": "",
-        "source": "groupme",
-        "tags": [
-            "general",
-            "campus life"
-        ]
+        "source": "groupme"
     },
     {
         "title": "Join Japanese Conversation Club \u00d7 Rutgers Origami Club for a special collaboration night!",
@@ -245,11 +197,7 @@
         "date": "2026-02-18",
         "start_time": "2026-02-18T20:00:00",
         "end_time": "2026-02-18T21:30:00",
-        "source": "groupme",
-        "tags": [
-            "general",
-            "campus life"
-        ]
+        "source": "groupme"
     },
     {
         "title": "Tonight!",
@@ -259,11 +207,7 @@
         "date": "2026-02-03",
         "start_time": "2026-02-03T19:30:00",
         "end_time": "",
-        "source": "groupme",
-        "tags": [
-            "general",
-            "campus life"
-        ]
+        "source": "groupme"
     },
     {
         "title": "Join us for our chains and charm origami night!",
@@ -273,11 +217,7 @@
         "date": "2026-02-03",
         "start_time": "2026-02-03T19:30:00",
         "end_time": "",
-        "source": "groupme",
-        "tags": [
-            "general",
-            "campus life"
-        ]
+        "source": "groupme"
     },
     {
         "title": "Reminder!",
@@ -287,11 +227,7 @@
         "date": "2026-01-20",
         "start_time": "2026-01-20T19:30:00",
         "end_time": "",
-        "source": "groupme",
-        "tags": [
-            "general",
-            "campus life"
-        ]
+        "source": "groupme"
     },
     {
         "title": "Hi guys!!",
@@ -301,11 +237,7 @@
         "date": "2026-01-20",
         "start_time": "2026-01-20T19:30:00",
         "end_time": "",
-        "source": "groupme",
-        "tags": [
-            "general",
-            "campus life"
-        ]
+        "source": "groupme"
     },
     {
         "title": "Winter Wonderland event this Monday! \u2744\ufe0f\u26c4\ufe0f",
@@ -315,11 +247,7 @@
         "date": "2025-12-01",
         "start_time": "2025-12-01T21:49:00",
         "end_time": "",
-        "source": "groupme",
-        "tags": [
-            "general",
-            "campus life"
-        ]
+        "source": "groupme"
     },
     {
         "title": "Hi guys! This is Priya, I\u2019m one of the Fall \u201925 interns and I\u2019ll be taking over with GroupMe announcements this week\u2728",
@@ -329,11 +257,7 @@
         "date": "2025-11-17",
         "start_time": "2025-11-17T20:19:00",
         "end_time": "2025-11-17T21:19:00",
-        "source": "groupme",
-        "tags": [
-            "general",
-            "campus life"
-        ]
+        "source": "groupme"
     },
     {
         "title": "Hey all!",
@@ -343,109 +267,6 @@
         "date": "2025-11-10",
         "start_time": "2025-11-10T00:00:00",
         "end_time": "",
-        "source": "groupme",
-        "tags": [
-            "general",
-            "campus life"
-        ]
-    },
-    {
-        "title": "Formal Jeopardy!",
-        "club_name": "Japanese Conversation Club",
-        "description": "Tonight will be our last meeting of the semester! If you want one last opportunity to come play games, learn Japanese, win prizes, or just meet others who are interested in learning Japanese, this is the last chance to do it! As always, no matter what level of Japanese you are, how proficient or fluent you are, we will always welcome you if you can or want to learn Japanese! Today\u2019s meeting is going to be special, as in the last meetings of the semester, we request that you wear formal clothes! During this meeting, we are going to have food, prizes, and play Jeopardy to finish out the semester. We hope to see you all there!",
-        "location": "Room 212, Murray Hall",
-        "date": "2026-04-30",
-        "start_time": "2026-04-30T00:00:00",
-        "end_time": "2026-04-30T02:00:00",
-        "source": "getinvolved",
-        "tags": [
-            "japanese language",
-            "social event",
-            "game night",
-            "semester finale",
-            "formal attire"
-        ]
-    },
-    {
-        "title": "UMR x MTC x MPRC Volleyball Tournament",
-        "club_name": "United Mission for Relief and Development",
-        "description": "Assalamualaikum! \ud83c\udfd0 Join MPRC, UMR, and MTC for our Charity Volleyball Tournament , a collaborative event bringing together competition, community, and service. This isn\u2019t just one game- it\u2019s a multi-team sports tournament experience , where participants can compete, connect, and give back all in one place. Alongside the tournament, we\u2019ll be creating hygiene kits for a local shelter , supporting our community both locally and globally. All proceeds from the event will go toward the UMR Sudan Relief Fund , providing essential aid to those in need. Whether you\u2019re playing, volunteering, or cheering from the sidelines, this event is about more than just sports- it\u2019s about impact. Event Details: \ud83d\udccd College Avenue Gym Annex \ud83d\uddd3\ufe0f Wednesday, April 29 \u23f0 5:00 PM Registration: $85 per team (6 people minimum, 7 with 1 sub) Spectators are encouraged to RSVP Be part of the energy, the teamwork, and the cause\u2014serve the community while you play. \ud83e\udd32",
-        "location": "College Avenue Gym Annex",
-        "date": "2026-04-29",
-        "start_time": "2026-04-29T21:00:00",
-        "end_time": "2026-04-30T02:00:00",
-        "source": "getinvolved",
-        "tags": [
-            "general",
-            "campus life"
-        ]
-    },
-    {
-        "title": "RUSEPRC General Meeting",
-        "club_name": "Seeing Eye Puppy Raising Club (Rutgers University)",
-        "description": "Join us to meet our puppies and learn about our club\u2019s mission! \u00a0This is our last General Meeting of the semester!",
-        "location": "Bartlett Hall Room 123 (Cook/Douglass)",
-        "date": "2026-04-30",
-        "start_time": "2026-04-30T01:00:00",
-        "end_time": "2026-04-30T02:30:00",
-        "source": "getinvolved",
-        "tags": [
-            "general",
-            "campus life"
-        ]
-    },
-    {
-        "title": "RUOC Meeting 4/29",
-        "club_name": "Outdoors Club (Rutgers University)",
-        "description": "Join us tonight at 9:30pm at The Shed! Join the RUOC GroupMe or follow us on Instagram for more information: https://groupme.com/join_group/50371782/BNpdUBTu @rutgersoutdoors",
-        "location": "Rutgers Outdoors Club \"The Shed\"",
-        "date": "2026-04-30",
-        "start_time": "2026-04-30T01:30:00",
-        "end_time": "2026-04-30T02:30:00",
-        "source": "getinvolved",
-        "tags": [
-            "general",
-            "campus life"
-        ]
-    },
-    {
-        "title": "Curly's Got Talent ",
-        "club_name": "RU Curly",
-        "description": "\u272e The curls are READY\u2026 the stage is SET\u2026 the judges are WAITING \u272e End the night on a HIGH note with Curly\u2019s Got Talent! \ud81a\udd54 \u0741 \u02d6 Sign up to be a contestant by using the link in our Instagram bio (sign up in person as well)! ALL talents are welcome! \u200e\u22c6 \u02da\uff61\u22c6 \ud83c\udfa4\ud83e\ude70\ud83d\udd8c\ufe0f\ud83d\udcdd\ud83c\udfad\ud83c\udfb9\u2027\u208a\u02da \u22c5",
-        "location": "Van Dyck Hall (Room 211)",
-        "date": "2026-04-30",
-        "start_time": "2026-04-30T01:00:00",
-        "end_time": "2026-04-30T03:00:00",
-        "source": "getinvolved",
-        "tags": [
-            "general",
-            "campus life"
-        ]
-    },
-        {
-        "title": "Karaoke",
-        "club_name": "Karaoke Club",
-        "description": "Join us for a fun night of karaoke.",
-        "location": "Douglass Student Center",
-        "date": "2026-09-24",
-        "start_time": "2026-09-24T23:30:00Z",
-        "end_time": "2026-09-25T01:00:00Z",
-        "source": "getinvolved",
-        "tags": [
-            "academic"
-        ]
-    },
-    {
-        "title": "2016 Themed Karaoke",
-        "club_name": "Fusion: The Rutgers Union of Mixed People",
-        "description": "Join us March 24th at 7:30pm for some 2016 karaoke. Lets bring back 2016 vibes a decade later! This meeting will take place at the Rutgers Room @ Douglass Student Center.",
-        "location": "Rutgers Room @ Douglass Student Center",
-        "date": "2026-03-24",
-        "start_time": "2026-03-24T23:30:00Z",
-        "end_time": "2026-03-25T01:00:00Z",
-        "source": "getinvolved",
-        "tags": [
-            "academic"
-        ]
+        "source": "groupme"
     }
 ]

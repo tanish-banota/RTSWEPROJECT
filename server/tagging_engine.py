@@ -1,111 +1,99 @@
 import os
 import json
 import time
-from pathlib import Path
 from google import genai
 from dotenv import load_dotenv
 from tqdm import tqdm
 
-# 1. Setup — load root .env explicitly so GEMINI_API_KEY is found regardless of CWD
-load_dotenv(Path(__file__).resolve().parent.parent / ".env")
+load_dotenv()
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
-CURRENT_MODEL = "gemini-2.5-flash"
+CURRENT_MODEL = "gemini-2.0-flash"
 
-# Set to True once we confirm the API key quota is exhausted for this run
 _key_exhausted = False
 
-def _is_quota_exhausted(error_str):
-    return "RESOURCE_EXHAUSTED" in error_str or "QUOTA" in error_str or "QUOTA_EXCEEDED" in error_str
-
-def generate_tags(event, use_ai=True, attempt=1):
+def process_batch(batch, retry_count=0):
+    """Sends a group of events to the AI for tagging in one go with retry logic."""
     global _key_exhausted
+    MAX_RETRIES = 2
+    
+    # Create a numbered list for the prompt
+    batch_text = ""
+    for i, ev in enumerate(batch):
+        batch_text += f"{i+1}. {ev.get('club_name')} | {ev.get('title')} | {ev.get('description')[:150]}\n"
 
-    title = event.get('title', 'No Title')
-    description = event.get('description', '')
-    club = event.get('club_name', 'Unknown Club')
-    MAX_ATTEMPTS = 3
-
-    if not use_ai or _key_exhausted:
-        return ["general", "campus life"]
-
-    prompt = f"Categorize this Rutgers event: {club} | {title} | {description}. Return 3-5 comma-separated tags."
+    prompt = (
+        f"Categorize these {len(batch)} Rutgers events. For each, return exactly 3-5 comma-separated tags. "
+        f"Format your response as a numbered list matching the input:\n\n{batch_text}"
+    )
 
     try:
-        # Small delay to respect free-tier limits
-        time.sleep(0.8)
-
+        # Increased base delay to 7 seconds for safer free-tier usage
+        time.sleep(7.0) 
+        
         response = client.models.generate_content(model=CURRENT_MODEL, contents=prompt)
+        
         if not response.text:
-            raise ValueError("Empty response from AI")
+            return [["general", "campus life"]] * len(batch)
 
-        return [t.strip().lower() for t in response.text.split(",")]
+        lines = [line.strip() for line in response.text.strip().split('\n') if line.strip()]
+        
+        results = []
+        for line in lines:
+            content = line.split('.', 1)[-1].strip()
+            results.append([t.strip().lower() for t in content.split(',')])
+        
+        while len(results) < len(batch):
+            results.append(["general", "campus life"])
+            
+        return results
 
     except Exception as e:
-        error_str = str(e).upper()
-
-        if _is_quota_exhausted(error_str):
+        error_msg = str(e).upper()
+        # If we hit a rate limit and haven't exceeded retries for this batch
+        if ("429" in error_msg or "RESOURCE_EXHAUSTED" in error_msg) and retry_count < MAX_RETRIES:
+            tqdm.write(f"🐢 Rate limit hit. Cooling down for 30s before retry {retry_count + 1}...")
+            time.sleep(30)
+            return process_batch(batch, retry_count=retry_count + 1)
+        
+        # If we've exhausted retries or hit a different error
+        if "429" in error_msg or "RESOURCE_EXHAUSTED" in error_msg:
             _key_exhausted = True
-            tqdm.write(f"🚫 API KEY EXHAUSTED: Quota exceeded. Skipping AI tagging for all remaining events.")
-            return generate_tags(event, use_ai=False)
+            tqdm.write("🚫 Quota exhausted for this run. Switching to fallbacks.")
+        else:
+            tqdm.write(f"❌ AI Error: {e}")
+            
+        return [["general", "campus life"]] * len(batch)
 
-        # Handle temporary slowdowns/503s with retries
-        if ("503" in error_str or "UNAVAILABLE" in error_str or "429" in error_str) and attempt <= MAX_ATTEMPTS:
-            wait_time = attempt * 5
-            # Use tqdm.write so the print doesn't break the progress bar UI
-            tqdm.write(f"⚠️  SLOWDOWN: Google is busy. Retrying '{title}' in {wait_time}s... (Attempt {attempt})")
-            time.sleep(wait_time)
-            return generate_tags(event, use_ai=True, attempt=attempt + 1)
+def process_events_pipeline(input_path, output_path):
+    with open(input_path, 'r', encoding='utf-8') as f:
+        incoming_events = json.load(f)
 
-        tqdm.write(f"❌ AI ERROR for '{title}': {e}")
-        return generate_tags(event, use_ai=False)
+    to_process = []
+    for e in incoming_events:
+        # Check if tags are missing or are the generic placeholder
+        if "campus life" in e.get('tags', []) or not e.get('tags'):
+            to_process.append(e)
 
-
-def process_events_pipeline(input_file, output_file):
-    if not os.path.exists(input_file):
-        print(f"Error: {input_file} not found.")
+    if not to_process:
+        print("✅ All events already have high-quality tags. Nothing to process.")
         return
 
-    with open(input_file, 'r') as f:
-        new_events = json.load(f)
+    print(f"🚀 Batch processing {len(to_process)} events...")
 
-    existing_tags = []
-    if os.path.exists(output_file):
-        with open(output_file, 'r') as f:
-            try:
-                existing_tags = json.load(f)
-            except:
-                existing_tags = []
+    batch_size = 5
+    for i in tqdm(range(0, len(to_process), batch_size), desc="Batch Progress"):
+        if _key_exhausted: 
+            break
+        
+        batch = to_process[i : i + batch_size]
+        batch_tags = process_batch(batch)
+        
+        # Mapping tags back to the original objects
+        for j, tags in enumerate(batch_tags):
+            batch[j]['tags'] = tags
 
-    already_processed = {f"{e.get('title')}-{e.get('date')}" for e in existing_tags}
-    
-    # Filter for brand new events
-    to_process = [e for e in new_events if f"{e.get('title')}-{e.get('date')}" not in already_processed]
-    
-    print(f"--- Pipeline Started ---")
-    print(f"Found {len(new_events)} total events.")
-    print(f"Skipping {len(new_events) - len(to_process)} already tagged events.")
-    print(f"Processing {len(to_process)} new events...\n")
+        # Periodic save so we don't lose progress if it crashes
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(incoming_events, f, indent=4)
 
-    # The Progress Bar with a "Detailed" loop
-    for event in tqdm(to_process, desc="Tagging Progress", unit="event", leave=True):
-        tqdm.write(f"✨ Processing: {event.get('title')}") # This prints above the bar
-
-        tags = generate_tags(event, use_ai=not _key_exhausted)
-        event['tags'] = tags
-
-        existing_tags.append(event)
-
-        # Save after every event so we don't lose data if it crashes
-        with open(output_file, 'w') as f:
-            json.dump(existing_tags, f, indent=4)
-
-    if _key_exhausted:
-        print(f"\n⚠️  Pipeline Complete with degraded tagging — API quota was exhausted mid-run.")
-        print(f"   Remaining events tagged with fallback tags. Re-run when quota resets to tag them properly.")
-    else:
-        print(f"\n✅ Pipeline Complete! Check '{output_file}' for results.")
-
-    return to_process
-
-if __name__ == "__main__":
-    process_events_pipeline('data/clean/clean.json', 'server/tagged_events.json')
+    print(f"\n✅ Pipeline finished. Results saved to {output_path}")
