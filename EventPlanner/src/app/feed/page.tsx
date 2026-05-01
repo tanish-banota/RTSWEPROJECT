@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from "react";
 import EventCard from "@/components/EventCard";
+import SearchFilter from "@/components/SearchFilter";
 import { getEvents, Event } from "@/lib/api";
 
 export default function FeedPage() {
   const [events, setEvents] = useState<Event[]>([]);
+  const [filteredEvents, setFilteredEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -16,6 +18,7 @@ export default function FeedPage() {
         setError(null);
         const data = await getEvents();
         setEvents(data);
+        setFilteredEvents(data);
       } catch (err) {
         setError(err instanceof Error ? err.message : "Failed to fetch events");
         console.error("Error fetching events:", err);
@@ -47,9 +50,15 @@ export default function FeedPage() {
     <div className="p-6 max-w-xl mx-auto">
       <h1 className="text-2xl mb-4 font-bold">Event Feed</h1>
 
-      {events.map((e) => (
-        <EventCard key={e.id} event={e} />
-      ))}
+      <SearchFilter events={events} onFilteredEventsChange={setFilteredEvents} />
+
+      {filteredEvents.length === 0 ? (
+        <p className="text-gray-500 text-center py-8">
+          No events match your filters. Try adjusting your search or tags.
+        </p>
+      ) : (
+        filteredEvents.map((e) => <EventCard key={e.id} event={e} />)
+      )}
     </div>
   );
 }

@@ -6,6 +6,7 @@ export type Event = {
   club: string;
   location: string;
   description: string;
+  tags?: string[];
 };
 
 export const getEvents = async (): Promise<Event[]> => {
