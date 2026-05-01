@@ -48,6 +48,9 @@ export default function Navbar() {
         )}
         {user && (
           <>
+            <Link href="/favorites" className="text-sm text-gray-700 hover:text-blue-600">
+               Favorites
+            </Link>
             <Link href="/schedule/week" className="text-sm text-gray-700 hover:text-blue-600">
               Weekly
             </Link>

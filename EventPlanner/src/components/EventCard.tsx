@@ -24,6 +24,8 @@ export default function EventCard({ event }: EventCardProps) {
   const { user } = useAuth();
   const router = useRouter();
 
+  const [isFavorited, setIsFavorited] = useState(false);
+
   const handleDelete = async (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
@@ -50,6 +52,46 @@ export default function EventCard({ event }: EventCardProps) {
 
   const [isLoading, setIsLoading] = useState(false);
   const [isRSVPed, setIsRSVPed] = useState(false);
+
+  useEffect(() => {
+    if (!user) return;
+    
+    // Check if this event is already favorited by the user
+    const checkFavorite = async () => {
+      const { data } = await supabase
+        .from("user_favorites")
+        .select("id")
+        .eq("user_id", user.id)
+        .eq("event_id", event.id)
+        .single();
+      
+      if (data) setIsFavorited(true);
+    };
+
+    checkFavorite();
+  }, [user, event.id]);
+
+  const toggleFavorite = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!user) return alert("Please log in to favorite events");
+
+    if (isFavorited) {
+      // Remove favorite
+      await supabase
+        .from("user_favorites")
+        .delete()
+        .eq("user_id", user.id)
+        .eq("event_id", event.id);
+      setIsFavorited(false);
+    } else {
+      // Add favorite
+      await supabase
+        .from("user_favorites")
+        .insert([{ user_id: user.id, event_id: event.id }]);
+      setIsFavorited(true);
+    }
+  };
 
   useEffect(() => {
     if (!user) {
@@ -116,6 +158,13 @@ export default function EventCard({ event }: EventCardProps) {
 
   return (
     <div className="border p-4 rounded mb-4 shadow-sm relative group">
+      {/* Favorite Button */}
+      <button 
+        onClick={toggleFavorite}
+        className="absolute bottom-4 right-4 z-50 text-2xl"
+      >
+        {isFavorited ? "❤️" : "🤍"}
+      </button>
       {user?.is_admin && (
         <div className="absolute top-4 right-4 flex gap-2 z-50">
           <button onClick={handleEdit} className="p-2 bg-white border rounded shadow-md hover:bg-gray-100">
