@@ -31,7 +31,7 @@ export default function SearchFilter({
       const matchesSearch =
         searchQuery === "" ||
         event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        event.club.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        event.club_name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         event.description.toLowerCase().includes(searchQuery.toLowerCase());
 
       // If tags are selected, event must have at least one matching tag

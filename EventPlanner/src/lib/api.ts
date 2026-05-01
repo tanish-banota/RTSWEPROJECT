@@ -3,7 +3,7 @@ export type Event = {
   id: string;
   title: string;
   date: string;
-  club: string;
+  club_name: string;
   location: string;
   description: string;
   tags?: string[];

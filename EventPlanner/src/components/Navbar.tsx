@@ -38,6 +38,14 @@ export default function Navbar() {
         <Link href={user ? "/feed" : "/"} className="font-bold text-lg">
           Event Finder
         </Link>
+        {user?.is_admin && (
+          <Link 
+            href="/admin/add-event" 
+            className="bg-green-600 text-white px-3 py-1 rounded-md text-sm hover:bg-green-700"
+          >
+            + Add Event
+          </Link>
+        )}
         {user && (
           <>
             <Link href="/schedule/week" className="text-sm text-gray-700 hover:text-blue-600">

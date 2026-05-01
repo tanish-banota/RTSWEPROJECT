@@ -25,6 +25,7 @@ async function getSessionOnce(): Promise<Session | null> {
 type User = {
   id: string;
   email: string;
+  is_admin: boolean;
 };
 
 type AuthContextType = {
@@ -39,11 +40,12 @@ type AuthContextType = {
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
-function userFromSession(session: Session | null): User | null {
+function userFromSession(session: Session | null, isAdmin: boolean = false): User | null {
   if (!session?.user) return null;
   return {
     id: session.user.id,
     email: session.user.email ?? "",
+    is_admin: isAdmin,
   };
 }
 
@@ -59,14 +61,24 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       try {
         const session = await getSessionOnce();
         if (!active) return;
-        setUser(userFromSession(session));
+
+        if (session?.user) {
+          // Fetch the admin flag from the profiles table
+          const { data } = await supabase
+            .from("profiles")
+            .select("is_admin")
+            .eq("id", session.user.id)
+            .single();
+          
+          setUser(userFromSession(session, !!data?.is_admin));
+        } else {
+          setUser(null);
+        }
       } catch (err) {
         if (!active) return;
         setError((err as Error)?.message ?? "Failed to load session");
       } finally {
-        if (active) {
-          setLoading(false);
-        }
+        if (active) setLoading(false);
       }
     };
 
